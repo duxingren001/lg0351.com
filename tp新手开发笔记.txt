@@ -1,0 +1,439 @@
+1.手机号加密函数：encrypt();
+
+2.手机号解密函数：decrypt();
+
+系统里面的 mobile  和 name  都是加密的 。
+
+
+3.增加一个超级管理员  打开数据库：tp_seller  生成 shopid很重要，这是sass系统。
+
+4.Vliz8Pe70tLNaFzNxYO52b0yslINA/go     62e95a72fe009bcd8d8ce1cf145332dd   （13466807167    123456）
+
+
+5.登录之后 默认页面  
+PublicController.class.php中 41行    $this->ajaxReturn(array('status'=>1,'url'=>U('User/lists')));
+
+url  地址 为跳转的地址
+
+
+6.后台用户表  tp_admin  ， 后台用户获取   echo AID; 超级管理员返回 0
+
+tp_admin 增加 company  ，
+
+
+7. 合作公司表：  tp_xiangqin_company
+
+
+http://mallx.rose.lg0351.com/User/lists.html
+
+
+http://mx.rose.lg0351.com/Shop/index/sid/75.html
+
+
+8.if 
+<if condition="$list.status eq 1">
+<else /> 
+</if>
+
+%E5%BE%AE%E8%A3%82%E5%8F%98%E7%89%88%E6%9D%83%E6%89%80%E6%9C%89   微裂变版权所有
+
+%e9%be%99%e5%85%89%e7%a7%91%e6%8a%80%e7%89%88%e6%9d%83%e6%89%80%e6%9c%89  龙光科技版权所有
+
+
+9.查找语句
+
+
+	$company_obj = M('xiangqin_company');
+	
+	$list = $company_obj->order(array('id'=>'desc'))-> select();
+	$this->assign('ftitle_game', $ftitle_game);	
+	
+	
+	
+10 U方法：
+
+{:U('Check/index',array('uid' => 1), 'html')}
+
+
+{:U('Check/index','html')}	
+	
+	
+11. 
+
+                <empty name="list">
+
+                    <tr><td colspan="9">暂无信息</td></tr>
+
+                <else/>
+
+                <foreach name="list" item="row">	
+	
+                        <if condition="$row.status == 0">
+
+                            <b style="color:orange">待审核</b>
+
+                        <elseif condition="$row.status == 1" />
+
+                            <b style="color:green">已通过</b>
+
+                        <elseif condition="$row.status == 2" />
+
+                            <b style="color:red">未通过</b>
+
+                        </if>	
+				</foreach>
+
+                </empty>
+				
+				
+<foreach name="list" item="vo" key="k" >
+{$k}|{$vo}
+</foreach>			
+				
+	
+	
+12.
+
+                $self_data  = array(
+                    'name'=>I('name'),
+                    'mobile'=>I('mobile')        
+                );
+                $SelfAddress = D('SelfAddress');
+                $self_id = $SelfAddress->add($self_data);
+	
+	
+	
+13.
+ajax
+
+
+    $.ajax({
+            type : "POST",
+            url : "http://127.0.0.1/admin/list/",
+            data : {"id":"2"},
+			dataType:'json',
+            success : function(ret) {
+                console.log(ret);
+            },
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
+
+14用户类别：
+
+user 表中 ：
+rank_id  
+类别  管理后台：  http://mallx.hp.lg0351.com/User/rank
+
+tp_user_rank 表中 
+
+
+15 query查询
+
+
+	$xiangmushencha_obj = M('hp_xiangmushencha');
+	
+	$list = $xiangmushencha_obj->query("select W.id,W.title as wtitle  ,left(D.title,50) as dtitle   from  tp_hp_dayi_wen as W  left join tp_hp_dayi_da as D on W.id=D.da_wenid  where D.is_zhuanjia = 1 ");
+	
+	echo "<pre>";
+	print_r($list);
+	
+16 mysql  字符串截取   left
+
+
+
+17 后台上传插件，
+
+
+
+
+
+
+18 使用了 原系统的 登录方法：  在usermodel模型中  规定 shopid  等于75.
+
+
+
+前台：
+UID  登录用的 id ，SID   75  店铺id 。
+
+
+后台登陆用户  AID；输出 登陆用户的id ，如果是超级管理员 返回0
+
+
+
+
+
+
+	本地存储  ret_data 可以是json ，但是取出去是字符串：
+		
+		
+		localStorage.setItem("user",ret_data); 
+				 
+				 
+		var  u_string = localStorage.getItem("user");
+		var 	u = eval('(' + u_string + ')');  
+		u.mobile 
+		
+		
+		
+20 会员注册后默认是   
+
+1.手机号基本注册，2.兴趣爱好，属相等已经填写-待审核3.审核通过   4. -1禁止登陆
+
+
+
+
+
+
+
+21
+
+$res = M('User')->where('user_id = '.$id . ' AND shop_id = ' . SHOP_ID)->delete();
+
+
+		
+	22  当前网址 ：
+
+
+$pic = 'http://'.$_SERVER['HTTP_HOST'].'/Upload'
+
+
+
+
+23 获取  后台微信配置 
+        $AppId = C('AppId');
+        $AppSecret = C('AppSecret');
+	
+		
+		
+		
+		
+会员更新  
+'province_id'=>$province_id,'city_id'=>$city_id,'area_id'=>$area_id
+xiangqin_xueli
+sex 性别（0：保密，1：男，2：女）
+avatar 头像
+name  真是名字 
+user_name   昵称
+
+head_img  头像
+
+24 微信浏览器 自动获取信息。
+
+父类  mobile中去掉。
+
+if(($this->is_wx == 1 || $this->is_wx == 4) && ($this->account_type == 1) && $wx_info['app_id'] && $_SERVER['SERVER_NAME'] != str_replace('http://','',C('MOB_UPLOAD_URL'))) {
+
+			if(!$should_pay_reg || !$is_weixin_auth){
+
+				$this->auto_register();
+
+			}
+
+        }		
+25. ,FROM_UNIXTIME(J.addtime, "%Y-%m-%d %H:%i:%S")  as addtime  		
+		
+		
+		
+php微信录音 后转mp3格式		
+
+由于微信jssdk 录音 ，格式是amr ，必须转成mp3才可以播放
+后台代码：
+
+if($res['type']=="downloadFile1"){
+
+
+				$arr = $this->get_access_token_and_jsticket('wxa482d0784824951a','e72d510fd82e1a9bfa1d3ad6a20f58aa');
+				$pic_url='http://file.api.weixin.qq.com/cgi-bin/media/get?access_token='.$arr['access_token'].'&media_id='.$res['url'];
+				// $pic_url='http://www.16sucai.com/2014/07/44326.html';
+				$time = time();
+				
+				 
+				
+				
+				$pic_local_path = dirname(__FILE__) ;
+				$pic_local_path = explode('Application', $pic_local_path)[0].'/Upload/ybds';
+				//$pic_local = $pic_local_path . '/img1-' . $time . '.jpg';
+				$pic_local = $pic_local_path . '/img' .mt_rand(1000,9999).$time.'.amr';
+				if (!file_exists($pic_local_path)) {
+					mkdir($pic_local_path, 0777);
+					@chmod($pic_local_path, 0777);
+				}
+				ob_start(); //打开输出
+				readfile($pic_url); //输出图片文件
+				$img = ob_get_contents(); //得到浏览器输出
+				ob_end_clean(); //清除输出并关闭
+				file_put_contents($pic_local, $img);
+				
+				
+				
+				$amrFile = '/www/wwwroot/***/Upload'.explode('Upload', $pic_local)[1];
+
+				$mp3File = '/www/wwwroot/***/Upload'.explode('Upload', $pic_local)[1].'.mp3';
+
+				$command = "ffmpeg -i " . $amrFile . " " . $mp3File . " 2>&1";
+
+				exec($command);
+				
+				
+				
+				$pic = 'http://'.$_SERVER['HTTP_HOST'].'/Upload'.explode('Upload', $pic_local)[1];
+				 $this->ajaxReturn(array('code'=>1,'msg'=>$pic)) ;
+			}
+			
+			
+	如果没有安装  	 ffmpeg， 	
+	wget http://download.bt.cn/install/ext/ffmpeg.sh && sh ffmpeg.sh
+	
+	ffmpeg -version
+	
+	此脚本只适用 Centos6/Centos7 64位系统，若网站程序需要使用请在 PHP 禁用函数中取消掉exec、system等函数。
+			
+			
+			
+			
+			
+27 使用七牛云 ：
+
+下载 七牛包 ：
+
+	第一步，注册七牛云，创建空间，下载sdk
+	第二步，将下载的php-sdk-7.1.3.zip解压，提取php-sdk-7.1.3\src路径下的Qiniu文件夹到ThinkPHP/Library/Vendor路径下
+	<?php
+/**
+ * 作者: 老梁
+ * 时间: 2017/7/15
+ * 七牛云PHP-SDK的类库映射文件
+ */
+
+return array(
+    'Qiniu\Auth' => VENDOR_PATH . 'Qiniu/Auth.php',
+    'Qiniu\Zone' => VENDOR_PATH . 'Qiniu/Zone.php',
+    'Qiniu\Config' => VENDOR_PATH . 'Qiniu/Config.php',
+    'Qiniu\Etag' => VENDOR_PATH . 'Qiniu/Etag.php',
+    'Qiniu\Region' => VENDOR_PATH . 'Qiniu/Region.php',
+	
+	
+	
+    'Qiniu\Http\Client' => VENDOR_PATH . 'Qiniu/Http/Client.php',
+    'Qiniu\Http\Request' => VENDOR_PATH . 'Qiniu/Http/Request.php',
+    'Qiniu\Http\Response' => VENDOR_PATH . 'Qiniu/Http/Response.php',
+    'Qiniu\Http\Error' => VENDOR_PATH . 'Qiniu/Http/Error.php',
+    'Qiniu\Processing\ImageUrlBuilder' => VENDOR_PATH . 'Qiniu/Processing/Request.php',
+    'Qiniu\Processing\Operation' => VENDOR_PATH . 'Qiniu/Processing/Operation.php',
+    'Qiniu\Processing\PersistentFop' => VENDOR_PATH . 'Qiniu/Processing/PersistentFop.php',
+    'Qiniu\Storage\BucketManager' => VENDOR_PATH . 'Qiniu/Storage/BucketManager.php',
+    'Qiniu\Storage\FormUploader' => VENDOR_PATH . 'Qiniu/Storage/FormUploader.php',
+    'Qiniu\Storage\ResumeUploader' => VENDOR_PATH . 'Qiniu/Storage/ResumeUploader.php',
+    'Qiniu\Storage\UploadManager' => VENDOR_PATH . 'Qiniu/Storage/UploadManager.php',
+);
+
+
+再任意一个控制中  。
+public  function  test(){
+	
+$bucket = 'biaodan';
+$accessKey = 'Tzdv6uvfGE3dZtsZkkqS4mIyziT6LqU_77Xfncfp';
+$secretKey = 'YvmRdtIGe9d-YwjLsNKoLbgA9YsUD5SgZGtdrw3q';
+
+Vendor('Qiniu.functions');  //功能文件引入
+$auth = new \Qiniu\Auth($accessKey, $secretKey);
+// 生成上传Token
+$token = $auth->uploadToken($bucket);
+echo $token;
+	
+	
+$uploadMgr = new \Qiniu\Storage\UploadManager();
+
+$filePath="./Upload/ybds/img10751587637810.jpg";
+
+
+$key ="bbbbb.jpg";
+
+            // 调用 UploadManager 的 putFile 方法进行文件的上传
+            list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
+            if ($err !== null) {
+                  echo '11111';
+            } else {
+                //返回图片的完整URL
+               echo $ret['key'];
+            }	
+	
+	
+}	
+			
+完整   ：  上传amr 并转成 mp3格式代码：
+
+
+public  function  test(){
+	
+$bucket = 'biaodan';
+$accessKey = 'Tzdv6uvfGE3dZtsZkkqS4mIyziT6LqU_77Xfncfp';
+$secretKey = 'YvmRdtIGe9d-YwjLsNKoLbgA9YsUD5SgZGtdrw3q';
+
+Vendor('Qiniu.functions');  //功能文件引入
+$auth = new \Qiniu\Auth($accessKey, $secretKey);
+// 生成上传Token
+$card_id ="img12881587527080.amr";
+$filePath = './Upload/ybds/' . $card_id;
+$mediaid = substr($card_id, 0, -4);
+$savekey = \Qiniu\base64_urlSafeEncode($bucket.':'.$mediaid.'.mp3');
+$pipeline = '';
+$fops = "avthumb/mp3/ab/320k/ar/44100/acodec/libmp3lame";
+$fops = $fops.'|saveas/'.$savekey;
+    if(!empty($pipeline)){  //使用私有队列
+        $policy = array(
+            'persistentOps' => $fops,
+            'persistentPipeline' => $pipeline
+        );
+    }else{                  //使用公有队列
+        $policy = array(
+            'persistentOps' => $fops
+        );
+    }
+
+$token = $auth->uploadToken($bucket, null, 3600, $policy);
+
+$uploadMgr = new \Qiniu\Storage\UploadManager();
+
+$key = $mediaid.'.amr'; 
+
+list($ret, $err) = $uploadMgr->putFile($token, $key, $filePath);
+if ($err !== null) {
+	echo '11111';
+} else {
+	echo  $ret['key'];
+}
+
+	
+}			
+		
+------------------------------------------------------+
+-------------------------------------------------------
+
+/www/wwwroot/rose.lg0351.com/ffmpeg/ffmpeg-git-20200324-amd64-static/ffmpeg  -i   test.amr  test.mp3
+
+
+$amrFile = '/www/wwwroot/rose.lg0351.com/Upload/ybds/img98671587527690.amr';
+
+$mp3File = '/www/wwwroot/rose.lg0351.com/Upload/ybds/img98671587527690.mp3';
+
+$command = "/www/wwwroot/rose.lg0351.com/ffmpeg/ffmpeg-git-20200324-amd64-static/ffmpegffmpeg -i " . $amrFile . " " . $mp3File . " 2>&1";
+
+exec($command);
+		 
+		 
+		 
+		 
+		 
+githup 地址：		 
+https://github.com/duxingren001/lg0351.com.git
+	 
+		 
+		 
+		 
+		 
+		 
+	
