@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>我的消息</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../css/news.css" rel="stylesheet" type="text/css" />
+<link href="../css/footer.css" rel="stylesheet" type="text/css" />
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+</head>
+
+<body>
+	
+	<div class="wu">
+		<img src="../images/news-wu.png"/>
+		<p>暂无消息，快去给ta点亮绿灯发起聊天吧</p>
+	</div>
+	
+<dl class="main">
+	<dd class="line-bottom" onClick="location.href='chat.html'">
+		<div class="new-tou">
+			<div class="tou"><img alt="" src="../images/user-img.png"/></div>
+			<b>1</b>
+		</div>
+		<div class="new-word">
+			<h6>昵称&nbsp;<span class="iconfont icon-nv"></span><b>15:30</b></h6>
+			<p>哈喽！小可爱，你在吗？</p>
+		</div>
+	</dd>
+	<dd class="line-bottom">
+		<div class="new-tou">
+			<div class="tou"><img alt="" src="../images/user-img2.png"/></div>
+			<b>1</b>
+		</div>
+		<div class="new-word">
+			<h6>昵称&nbsp;<span class="iconfont icon-nv"></span><b>15:30</b></h6>
+			<p>你今天来楼下接我吗？我还得一会儿，领导有事情交代我呢</p>
+		</div>
+	</dd>
+	<dd class="line-bottom">
+		<div class="new-tou">
+			<div class="tou"><img alt="" src="../images/user-img3.png"/></div>
+		</div>
+		<div class="new-word">
+			<h6>昵称&nbsp;<span class="iconfont icon-nv"></span><b>15:30</b></h6>
+			<p>好，我答应你了</p>
+		</div>
+	</dd>
+</dl>
+	
+	
+	<footer>
+		<ul>
+			<li  onClick="location.href='../index.html'">
+				<span class="iconfont icon-000"></span>
+				<p>会客厅</p>
+			</li>
+			<li class="cur">
+				<span class="iconfont icon-001"><b>2</b></span>
+				<p>消息</p>
+			</li>
+			<li onClick="location.href='../user/user.html'">
+				<span class="iconfont icon-002"></span>
+				<p>我</p>
+			</li>
+		</ul>
+	</footer>
+	
+	
+</body>
+</html>

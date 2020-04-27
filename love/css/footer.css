@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+footer{ position: fixed; bottom:0; left: 0;  width:100%; }
+footer ul{ overflow: hidden ;padding:20px 0 10px 0; border-top:solid 1px#e6e6e6; max-width: 640px; margin:auto;background:#fff;}
+footer ul li{ float: left; width:33.333333333333%; text-align: center; font-size: 22px;}
+footer .iconfont{ font-size:40px; color: #bfbfbf; position: relative; line-height: 1;}
+footer .cur .iconfont{color: transparent; background-image: linear-gradient(#5edac2,#36afe5);  -webkit-background-clip:text;}
+footer ul li .iconfont b{ display: block;position:absolute;right: -20px; top:-10px; width:36px; height: 28px; line-height: 28px;background:#ff0000; color: #fff;font-size:20px; text-align: center; border-radius: 36px; font-weight: normal;}
+footer ul li p{font-size: 22px; color: #333;}

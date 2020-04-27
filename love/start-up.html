@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>青年汇·民生缘</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/start-up.css" rel="stylesheet" type="text/css" />
+<link href="css/iconfont.css" rel="stylesheet" type="text/css" />
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+</head>
+
+<body>
+	<div class="main">
+		<img src="images/index-top.png"/>
+		<img class="logo" src="images/logo.png"/>
+		<div class="start-up-btn">
+			<a href="signin/signin.html"><span>登录</span></a>
+			<a href="register/register-1.html"><span>注册</span></a>
+		</div>
+		<p><span class="iconfont icon-xin1"></span> 交友秘籍 <span class="iconfont icon-xin1"></span></p>
+	</div>
+	
+	<div class="frame-con">
+		<div class="fmcon">
+			<h1>联谊平台实操宝典</h1>
+			<p><strong>1、</strong>本联谊平台由中国民生银行上海分行工会开发，仅限对注册单位开放，若还不是注册单位，请与民生银行管理员张鑫怿联系，<strong>021-61877568</strong>。<br/><br/><strong>2、</strong>用户首次登录请先申请注册，正确选择所在单位、填写真实姓名和手机号，设置登录密码后，点击下一步完善个人信息，提交管理员审核，管理员一般1-2个工作日完成审核。<br/><br/><strong>3、</strong>用户完成注册并审核通过后，再次登录平台，输入手机号及密码，进入交友会客厅。若审核未通过，用户登录后，弹话框会显示审核未通过及原因，用户需重新注册审核。<br/><br/><strong>4、</strong>用户在交友会客厅内仅可见异性用户，用户可对大厅内的异性用户亮灯，感兴趣点亮绿灯，不感兴趣点亮红灯，亮绿灯的可开启聊天模式。<br/><br/><strong>5、</strong>交友会客厅同时设有热度排行及筛选功能，用户可根据需求选择。<br/><br/><strong>6、</strong>用户退出后的未读消息，可进入【我】的功能里【消息栏】查找。<br/><br/><strong>7、</strong>男女用户通过联谊平台牵手成功，可进入【我】的功能里点击【牵手成功】，管理员将送出小礼物一份。<br/><br/><strong>8、</strong>本平台的最终解释权归中国民生银行上海分行工会所有。</p>
+			<div class="btn" id="know">我知道了</div>
+		</div>	
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>	
+	<script type="text/javascript">
+
+	$(function(){
+		$(".main p").click(function(){
+				$(".frame-con").fadeIn(100);
+		});
+		
+		$("#know").click(function(){
+
+			$(".frame-con").fadeOut(100);
+
+		})
+	});
+
+	</script>
+</body>
+</html>

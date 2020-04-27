@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>与昵称的聊天</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/iconfont.css" rel="stylesheet" type="text/css" />
+<link href="../css/chat.css" rel="stylesheet" type="text/css" />
+<script src="../js/iconfont-emoticon.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+	
+</head>
+
+<body>
+	
+<dl class="chat-main" id="chat">
+		<b class="time">您与<span>昵称</span>可以聊天了</b>
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<div class="ta-word">
+				<span></span>
+				<p>你在哪呢？</p>
+			</div>
+		</dd>
+		<b class="time">15:30</b>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"/></div>
+			<div class="me-word">
+				<span></span>
+				<p>我在图书管呢！你呢</p>
+			</div>
+		</dt>
+		
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<img class="ta-img" src="../images/index-bg.jpg"/>
+			
+		</dd>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"/></div>
+			<img class="me-img" src="../images/user-img2.png"/>
+		</dt>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"/></div>
+			<div class="me-word">
+				<span></span>
+				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-xieyan"></use></svg>
+			</div>
+		</dt>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"></div>
+			<div class="me-queren">
+				<p>您已发送确认请求<br/>请耐心等待……</p>
+				<strong></strong>
+			</div>
+		</dt>
+		<b class="time">对方拒绝了您的确认关系</b>
+	
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<div class="ta-word">
+				<span></span>
+				<svg class="icon" aria-hidden="true"><use xlink:href="#icon-xieyan"></use></svg>
+			</div>
+		</dd>
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<div class="ta-queren">
+				<span class="iconfont icon-xin1"></span>
+				<p>茫茫人海，只为遇见你<br/>遇见那个唯一的你</p>
+				<p><br/>ta向您发来确认请求<br/>是否同意？</p>
+				<strong></strong>
+			</div>
+			<div class="ta-fs-btn">
+				<div class="ok" id="tongyi"><p><span>同意</span></p></div>
+				<div class="no"><p><span>拒绝</span></p></div>
+			</div>
+		</dd>
+		
+		<b class="time">您拒绝了对方的确认关系</b>
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<div class="ta-audio">
+				<p><svg t="1587374540320" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2072" width="200" height="200"><path d="M660.68,121.22c-7.82-8.1-18.6-12.68-29.87-12.68c-11.26,0-22.04,4.58-29.87,12.68c-15.03,15.99-15.03,40.9,0,56.89c183.09,183.45,183.09,480.48,0,663.92c-16.63,16.66-16.63,43.65,0,60.3c16.66,16.64,43.65,16.64,60.3,0C875.5,685.95,875.24,337.3,660.68,121.22L660.68,121.22z M660.68,121.22"/><path d="M473.5,270.84c-16.19-14.48-40.69-14.48-56.89,0c-14.75,16.1-14.75,40.8,0,56.89c104.87,105.42,104.87,275.75,0,381.18c-14.49,16.19-14.49,40.69,0,56.89c16.1,14.75,40.8,14.75,56.89,0C607.18,627.89,607.18,408.75,473.5,270.84L473.5,270.84z"/><path d="M223.18,464.85c-13.34,13.24-20.84,31.27-20.84,50.07c0,18.8,7.5,36.82,20.84,50.07c20.29,20.46,50.92,26.67,77.58,15.7	c26.65-10.97,44.04-36.94,44.04-65.76c0-28.82-17.39-54.79-44.04-65.76C274.1,438.18,243.47,444.38,223.18,464.85L223.18,464.85z"/></svg>&nbsp;<span></span></p>
+				<audio src="../haicaowu.mp3"></audio>
+				<strong></strong>
+			</div>
+		</dd>
+		<dd>
+			<div class="ta-tou"><img src="../images/ta-photo.png"/></div>
+			<div class="ta-audio">
+				<p><svg t="1587374540320" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2072" width="200" height="200"><path d="M660.68,121.22c-7.82-8.1-18.6-12.68-29.87-12.68c-11.26,0-22.04,4.58-29.87,12.68c-15.03,15.99-15.03,40.9,0,56.89c183.09,183.45,183.09,480.48,0,663.92c-16.63,16.66-16.63,43.65,0,60.3c16.66,16.64,43.65,16.64,60.3,0C875.5,685.95,875.24,337.3,660.68,121.22L660.68,121.22z M660.68,121.22"/><path d="M473.5,270.84c-16.19-14.48-40.69-14.48-56.89,0c-14.75,16.1-14.75,40.8,0,56.89c104.87,105.42,104.87,275.75,0,381.18c-14.49,16.19-14.49,40.69,0,56.89c16.1,14.75,40.8,14.75,56.89,0C607.18,627.89,607.18,408.75,473.5,270.84L473.5,270.84z"/><path d="M223.18,464.85c-13.34,13.24-20.84,31.27-20.84,50.07c0,18.8,7.5,36.82,20.84,50.07c20.29,20.46,50.92,26.67,77.58,15.7	c26.65-10.97,44.04-36.94,44.04-65.76c0-28.82-17.39-54.79-44.04-65.76C274.1,438.18,243.47,444.38,223.18,464.85L223.18,464.85z"/></svg>&nbsp;<span></span></p>
+				<audio src="../de.mp3"></audio>
+				<strong></strong>
+			</div>
+		</dd>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"></div>
+			<div class="me-audio">
+				<p><span></span>&nbsp;
+				<svg t="1587374540320" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2072" width="200" height="200"><path d="M660.68,121.22c-7.82-8.1-18.6-12.68-29.87-12.68c-11.26,0-22.04,4.58-29.87,12.68c-15.03,15.99-15.03,40.9,0,56.89c183.09,183.45,183.09,480.48,0,663.92c-16.63,16.66-16.63,43.65,0,60.3c16.66,16.64,43.65,16.64,60.3,0C875.5,685.95,875.24,337.3,660.68,121.22L660.68,121.22z M660.68,121.22"/><path d="M473.5,270.84c-16.19-14.48-40.69-14.48-56.89,0c-14.75,16.1-14.75,40.8,0,56.89c104.87,105.42,104.87,275.75,0,381.18c-14.49,16.19-14.49,40.69,0,56.89c16.1,14.75,40.8,14.75,56.89,0C607.18,627.89,607.18,408.75,473.5,270.84L473.5,270.84z"/><path d="M223.18,464.85c-13.34,13.24-20.84,31.27-20.84,50.07c0,18.8,7.5,36.82,20.84,50.07c20.29,20.46,50.92,26.67,77.58,15.7	c26.65-10.97,44.04-36.94,44.04-65.76c0-28.82-17.39-54.79-44.04-65.76C274.1,438.18,243.47,444.38,223.18,464.85L223.18,464.85z"/></svg></p>
+				<audio src="../de.mp3"></audio>
+				<strong></strong>
+			</div>
+		</dt>
+		<dt>
+			<div class="me-tou"><img src="../images/tou.png"></div>
+			<div class="me-audio">
+				<p><span></span>&nbsp;
+				<svg t="1587374540320" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2072" width="200" height="200"><path d="M660.68,121.22c-7.82-8.1-18.6-12.68-29.87-12.68c-11.26,0-22.04,4.58-29.87,12.68c-15.03,15.99-15.03,40.9,0,56.89c183.09,183.45,183.09,480.48,0,663.92c-16.63,16.66-16.63,43.65,0,60.3c16.66,16.64,43.65,16.64,60.3,0C875.5,685.95,875.24,337.3,660.68,121.22L660.68,121.22z M660.68,121.22"/><path d="M473.5,270.84c-16.19-14.48-40.69-14.48-56.89,0c-14.75,16.1-14.75,40.8,0,56.89c104.87,105.42,104.87,275.75,0,381.18c-14.49,16.19-14.49,40.69,0,56.89c16.1,14.75,40.8,14.75,56.89,0C607.18,627.89,607.18,408.75,473.5,270.84L473.5,270.84z"/><path d="M223.18,464.85c-13.34,13.24-20.84,31.27-20.84,50.07c0,18.8,7.5,36.82,20.84,50.07c20.29,20.46,50.92,26.67,77.58,15.7	c26.65-10.97,44.04-36.94,44.04-65.76c0-28.82-17.39-54.79-44.04-65.76C274.1,438.18,243.47,444.38,223.18,464.85L223.18,464.85z"/></svg></p>
+				<audio src="../daoxiang.mp3"></audio>
+				<strong></strong>
+			</div>
+		</dt>
+		
+	</dl>
+	
+
+<div class="ft-con">
+	
+	<div class="bncon" id="bncon">
+		<div class="btn btn-red" id="nook" ><div class="btn-baibg"><span class="iconfont icon-noxin00"></span>&nbsp;<span>对ta不感兴趣</span></div></div>
+		<div class="btn btn-lv" id="queren"><div class="btn-baibg"><span class="iconfont icon-duigoutianchong-"></span>&nbsp;<span>发送确认关系</span></div></div>
+	</div>
+	<div class="chat-con">
+		<div class="yuyin" id="yj_btn">
+			<span class="iconfont icon-yuyin"></span>
+			<span class="iconfont icon-jianpan"></span>
+		</div>
+		<div class="jp" id="kuang">
+			<div class="voice-con">
+				<div class="voice">
+					<span></span>
+					<img alt="" src="../images/vo.gif"/>
+				</div>
+				<div class="close-con">
+					<svg t="1587286496959" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2138"><path d="M451.669333 512L55.108267 908.544a42.7776 42.7776 0 0 0 0 60.330667 42.7776 42.7776 0 0 0 60.330666 0L512 572.356267l396.544 396.561066c16.597333 16.597333 43.776 16.597333 60.330667 0 16.597333-16.597333 16.597333-43.776 0-60.373333L572.347733 512l396.561067-396.544c16.597333-16.597333 16.597333-43.776 0-60.330667-16.597333-16.597333-43.776-16.597333-60.373333 0L512 451.6608 115.456 55.125333a42.7776 42.7776 0 0 0-60.330667 0 42.7776 42.7776 0 0 0 0 60.330667L451.669333 512z" p-id="2139"></path></svg>
+					<p>松开取消</p>
+				</div>
+			</div>	
+			<div class="chat chat-btn" id="say" >
+				<div class="qu">
+					<p>松开发送</p>
+					<span class="iconfont icon-yuyin"></span>
+				</div>
+				<input type="button" value="按住 说话"/>
+			</div>
+			<div class="chat chat-text" id="shuru"><textarea></textarea></div>
+		</div>
+		<span class="iconfont icon-biaoqing"></span>
+		<span class="iconfont icon-jjia-" id="jia"></span>
+		<svg class="icon" id="emot" aria-hidden="true"><use class="no" xlink:href="#icon-xiaolian"></use></svg>
+		<input class="fasong" id="fsbtn" type="button" value="发送"/>
+	</div>
+	<div class="emo-con">
+		<div class="emo">
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-a"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bizui"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-baiyan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-aixin"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-dajing"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-ziya"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-daxiao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-esi"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fadai"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fankun"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-ganga"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fennu"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-hanyan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-jingkong"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-haochi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-emo"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-jingsong"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-jingya"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-kaixin"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-lengku"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-danao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-liukoushui"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-liulei"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-mengbi"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-mianwubiaoqing"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-nanguo"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shuizhuo"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-taoyan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-tanchi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-siliao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-tiaopi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xiaochulei"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-wuliao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xingxingyan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xieyan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xiasi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xiaolian"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-ku"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shengqi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-yousiliao"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-en"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bushufu"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bianbian"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fankun1"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-feiwen"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-ganmao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-huaixiao"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-liuhan"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-outu"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-keshui"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-renzhe"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-santiaoxian"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-guaiwu"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shoushang"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-tianshi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shuai"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xianwen"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xiaodiaodaya"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xiong"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-yiwen"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-yun"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-liubixie"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shimo"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-dianzan"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-biti"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fendou"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-huqi"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-heng"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-kulou"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-leng"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-taoyan1"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-shuixing"></use></svg>
+			
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-aini"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-aixin1"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-zhadan"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-xinsui"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-maren"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-zhutou"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-qie"></use></svg>
+			<svg class="icon" aria-hidden="true"> <use xlink:href="#icon-youling"></use></svg>
+		</div>
+	</div>
+	
+	<div class="photo-con">
+		<ul>
+			<li>
+				<div><span class="iconfont icon-xiangce"></span></div>
+				<p>相册</p>
+			</li>
+			<li>
+				<div><span class="iconfont icon-zhaoxiangji"></span></div>
+				<p>拍摄</p>
+			</li>
+		</ul>
+	</div>
+</div>	
+
+<div class="frame-con">
+		<div class="fmcon">
+			<p>您已点亮<strong>红灯</strong>，以后将不再与ta聊天<br/>点击我知道了将关闭聊天页面<br/>请到<strong>个人中心-不感兴趣</strong>点击查看</p>
+			<div class="btn btn-red" id="know"   onClick="location.href='../index.html'">我知道了</div>
+		</div>	
+	</div>	
+
+	
+	<div class="tongyi-con">
+		<div class="tycon">
+			<p>恭喜你，牵手成功！<br/>之后红娘将为您送上一份礼物！</p>
+			<div class="btn btn-lv">我知道了</div>
+		</div>	
+	</div>	
+	
+<script type="text/javascript">
+	
+	$(function(){
+		
+	//获取语音的长度显示出来同时加长
+		
+		for(var i=0;i<$(".me-audio").length;i++){
+            (function(index){
+ 
+		   var duration;
+		   var myVid = $(".me-audio").eq(index).children("audio")[0];
+			   myVid.load();
+						myVid.oncanplay = function () {
+
+			 console.log(index);
+
+			 $(".me-audio").eq(index).children("p").children("span").html(myVid.duration.toFixed(0)+"'");
+
+			 if(myVid.duration>60){
+
+			  $(".me-audio").eq(index).children("p").css("padding-left","200px");
+			 }else{
+
+			  $(".me-audio").eq(index).children("p").css("padding-left",myVid.duration.toFixed(0)*3+"px");
+			 }
+			//console.log("myVid.duration",myVid.duration);
+			 }
+
+      
+            })(i)}
+
+		for(var i=0;i<$(".ta-audio").length;i++){
+            (function(index){
+ 
+		   var duration;
+		   var myVid = $(".ta-audio").eq(index).children("audio")[0];
+			myVid.load();
+			myVid.oncanplay = function () {
+
+			 console.log(index);
+
+			 $(".ta-audio").eq(index).children("p").children("span").html(myVid.duration.toFixed(0)+"'");
+
+			 if(myVid.duration>60){
+
+			  $(".ta-audio").eq(index).children("p").css("padding-right","200px");
+			 }else{
+
+			  $(".ta-audio").eq(index).children("p").css("padding-right",myVid.duration.toFixed(0)*3+"px");
+			 }
+			//console.log("myVid.duration",myVid.duration);
+			 }
+
+      
+            })(i)}
+
+		
+		
+	//点击音频
+		
+		$(".me-audio").click(function(e){ 
+			
+			var music = $(this).children("audio")[0];
+			
+			for(var j=0;j<$(".me-audio").length;j++){
+				
+				if($(".me-audio").eq(j).children("audio")[0] != music){
+					
+				  $(".me-audio").eq(j).children("audio")[0].pause(); 
+				  $(".me-audio").eq(j).children("audio")[0].currentTime = 0;
+				  $(".me-audio").eq(j).children("p").removeClass("svg-anim");
+					
+			     }
+							
+			 }
+			   for(var j=0;j<$(".ta-audio").length;j++){
+			   $(".ta-audio").eq(j).children("audio")[0].pause(); 
+			   $(".ta-audio").eq(j).children("audio")[0].currentTime = 0; 
+				$(".ta-audio").eq(j).children("p").removeClass("svg-anim");	  
+			   }
+			
+			if(music.paused){
+				
+				music.play(); 
+				
+				$(this).children("p").addClass("svg-anim");
+				
+				 //判断是否播放完毕
+				
+				music.addEventListener('ended', function () { 
+					
+					$(".me-audio").children("p").removeClass("svg-anim");
+					
+				}, false);
+				
+			}else{ 
+				music.pause(); 
+				$(this).children("p").removeClass("svg-anim");
+				
+			} 
+		}); 
+		
+		
+		$(".ta-audio").click(function(){ 
+			
+			var music = $(this).children("audio")[0]; 
+			
+			for(var j=0;j<$(".me-audio").length;j++){
+				
+			   $(".me-audio").eq(j).children("audio")[0].pause(); 
+			   $(".me-audio").eq(j).children("audio")[0].currentTime = 0;
+				$(".me-audio").eq(j).children("p").removeClass("svg-anim");	
+				
+			   }
+			   for(var j=0;j<$(".ta-audio").length;j++){
+				   
+				   if($(".ta-audio").eq(j).children("audio")[0] != music){
+					   
+				   $(".ta-audio").eq(j).children("audio")[0].pause(); 
+				   $(".ta-audio").eq(j).children("audio")[0].currentTime = 0; 
+					$(".ta-audio").eq(j).children("p").removeClass("svg-anim");	  
+				   }
+			   }
+			if(music.paused){
+				
+				music.play(); 
+				$(this).children("p").addClass("svg-anim");
+				
+				//判断是否播放完毕
+				
+				music.addEventListener('ended', function () { 
+					
+					$(".ta-audio").children("p").removeClass("svg-anim");
+					
+				}, false);
+				
+			}else{ 
+				music.pause(); 
+				$(this).children("p").removeClass("svg-anim");
+				
+			} 
+		}); 
+		
+		
+	var abc = $(".chat-main").height();
+	$(document).scrollTop(abc);
+		
+	//发送确认关系
+		$("#queren").click(function(){
+			$("#chat").append('<dt><div class="me-tou"><img src="../images/tou.png"/></div><div class="me-queren"><p>您已发送确认请求<br/>请耐心等待……</p><strong></strong></div></dt>');
+			
+				var hhh=$(".chat-main").height();
+				$(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+		});
+
+	//语音和键盘切换，及按住发送语音
+		$("#yj_btn").click(function(){
+			
+			if($(this).attr('class')=="yuyin"){
+		
+		    $(this).removeClass("yuyin").addClass("jianpan");
+			$(this).siblings("#kuang").removeClass("jp").addClass("yj");
+				$(".fasong").css("right","-130px");
+				$("#bncon").stop().fadeIn(100);
+				
+			//按住发送语音	
+			$("#say").on({  
+			touchstart: function(e) { 
+				// 长按事件触发  
+				timeOutEvent = setTimeout(function() {  
+					timeOutEvent = 0; 
+				$(".voice-con").show();
+				$("#say").addClass("fangda"); 
+					$("body,html").css("overflow","hidden");
+				var hhh=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+					//alert('你长按了');  
+				}, 400);  
+				//长按400毫秒   
+				// e.preventDefault();    
+			},  
+			touchmove: function(e) {  
+				clearTimeout(timeOutEvent);  
+				timeOutEvent = 0; 
+				 var _touch = e.originalEvent.targetTouches[0];
+    			 var _x = _touch.pageX;
+    			 var _y = _touch.pageY;
+				 var _z = $("body").height();
+				
+				if(_touch.pageX>380 && _touch.pageY > (_z-_y) ){
+					//手指触碰的范围内---取消
+					$(".close-con").addClass("clo");
+					$(".voice").css("background-image","linear-gradient(#fd8470,#ff326c)");
+					$(".voice").children("span").css("background-image","linear-gradient(#ff486d,#ff336c)");
+				}else{
+					//手指触碰的其他范围内---发送
+					$(".close-con").removeClass("clo");
+					$(".voice").css("background-image","linear-gradient(#5edac2,#36afe5)");
+					$(".voice").children("span").css("background-image","linear-gradient(135deg,#40bbdc,#36b0e4)");
+				}
+				//console.log(_touch.pageX,_touch.pageY)
+			},   
+			touchend: function(e) {  
+				clearTimeout(timeOutEvent);  
+				if (timeOutEvent != 0) {  
+					// 点击事件  
+					// location.href = '/a/live-rooms.html';   
+				} 
+				$(".voice-con").hide();
+				$("#say").removeClass("fangda"); 
+				$("body,html").css("overflow","auto");
+				$(document).scrollTop(hhh);
+				return false;  
+			}  
+		}) 
+				
+				
+		   }else{
+		
+		    $(this).removeClass("jianpan").addClass("yuyin");
+			   
+			$(this).siblings("#kuang").removeClass("yj").addClass("jp");
+			   
+			   if($("#shuru").children("textarea").val().length>0){
+		
+				 $(".fasong").css("right","15px");
+				 $("#bncon").stop().fadeOut(200);
+
+			   }else{
+
+					$(".fasong").css("right","-130px");
+					$("#bncon").stop().fadeIn(100);
+			 }
+
+			   
+		   }
+			
+			var hhh=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+			
+			$(".photo-con").stop().hide();
+		    $("#jia").parent(".chat-con").siblings(".photo-con").removeClass("yes");
+			$("#jia").css({"transform": "rotate(0)", "-webkit-transform": "rotate(0)"});
+			
+			$(".emo-con").stop().hide();
+		    $("#emot").parent(".chat-con").siblings(".emo-con").removeClass("yes");
+			
+			$("#bncon").stop().fadeOut(200);
+			event.stopPropagation();
+			
+		});	
+		
+	//表情
+		
+		$(".emo-con").hide();
+		
+		$("#emot").click(function(){
+			if($(this).parent(".chat-con").siblings(".emo-con").attr('class')=="emo-con"){
+			
+				$(".emo-con").stop().show();
+				$(this).parent(".chat-con").siblings(".emo-con").addClass("yes");
+
+				$("#bncon").stop().fadeOut(200);
+
+				var bbb=$(window).height();
+				var hhh=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height",(bbb-550)+"px");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+				
+		   }else{
+		
+				$(".emo-con").stop().hide();
+				$(this).parent(".chat-con").siblings(".emo-con").removeClass("yes");
+			    $("#bncon").stop().fadeIn(100); 
+				
+				var hhh=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height","auto");
+				$(document).scrollTop(hhh);
+		   }
+			
+			$(".photo-con").stop().hide();
+		    $("#jia").parent(".chat-con").siblings(".photo-con").removeClass("yes");
+			$("#jia").css({"transform": "rotate(0)", "-webkit-transform": "rotate(0)"});
+			
+			event.stopPropagation();
+		});
+		
+	//点击表情  发送表情
+		$(".emo-con svg").click(function(){
+			
+			$("#chat").append('<dt><div class="me-tou"><img src="../images/tou.png"/></div><div class="me-word"><span></span><svg class="icon" aria-hidden="true">'+$(this).html()+'</svg></div></dt>');
+			
+			var ccc=$(".chat-main").prop("scrollHeight");
+			$(".chat-main").css("height","auto");
+			$(".chat-main").scrollTop(ccc);
+			$(document).scrollTop(ccc);
+			console.log(ccc);
+		});
+		
+	// 点击加号
+		
+		$(".photo-con").hide();
+		
+		$("#jia").click(function(){
+			
+			if($(this).parent(".chat-con").siblings(".photo-con").attr('class')=="photo-con"){
+
+				$(".photo-con").stop().show();
+				$(this).parent(".chat-con").siblings(".photo-con").addClass("yes");
+				$(this).css({"transform": "rotate(405deg)", "-webkit-transform": "rotate(405deg)"});
+
+				$("#bncon").stop().fadeOut(200);
+				
+				var bbb=$(window).height();
+				var ccc=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height",(bbb-600)+"px");
+				$(".chat-main").scrollTop(ccc);
+				$(document).scrollTop(ccc);
+				
+				
+		   }else{
+		
+				$(".photo-con").stop().hide();
+				$(this).parent(".chat-con").siblings(".photo-con").removeClass("yes");
+				$(this).css({"transform": "rotate(0)", "-webkit-transform": "rotate(0)"});
+				$("#bncon").stop().fadeIn(100); 
+			   
+				var hhh=$(".chat-main").prop("scrollHeight");
+				$(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+			   
+		   }
+			
+			$(".emo-con").stop().hide();
+		    $("#emot").parent(".chat-con").siblings(".emo-con").removeClass("yes");
+			
+			
+			event.stopPropagation();
+		});
+		
+		$(".photo-con").click(function(){
+			
+			$("#bncon").stop().fadeOut(200);
+			event.stopPropagation();
+		});
+	
+	//点击输入框	 
+		 $("#shuru").children("textarea").bind('input propertychange', function(){
+			 
+			if($("#shuru").children("textarea").val().length>0){
+		
+				$(".fasong").css("right","15px");
+			 $("#bncon").stop().fadeOut(200);
+				
+				var bbb=$(window).height();
+				var hhh=$(".chat-main").height();
+				$(".chat-main").css("height",(bbb-550)+"px");
+				$(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+			
+				 
+		   }else{
+			   
+				$(".fasong").css("right","-130px");
+			   
+				$("#bncon").stop().fadeIn(100);
+			  $(".chat-main").css("height","auto");
+				$(".chat-main").scrollTop(hhh);
+				$(document).scrollTop(hhh);
+		   }
+			 
+			event.stopPropagation();
+			
+		 });
+		
+		$("#shuru").children("textarea").click(function(){
+		
+				//$(".chat-main").css("margin-top", "-300px");
+			event.stopPropagation();
+			
+			$(".photo-con").hide();
+		    $("#jia").parent(".chat-con").siblings(".photo-con").removeClass("yes");
+			$("#jia").css({"transform": "rotate(0)", "-webkit-transform": "rotate(0)"});
+		
+			$(".emo-con").hide();
+		    $("#emot").parent(".chat-con").siblings(".emo-con").removeClass("yes");
+			
+			$("#bncon").stop().fadeOut(200);
+		});
+		
+	//点击发送
+		$("#fsbtn").click(function(e){
+			
+			$("#chat").append('<dt><div class="me-tou"><img src="../images/tou.png"/></div><div class="me-word"><span></span><p>'+$("#shuru").children("textarea").val()+'</p></div></dt>');
+			
+			$("#shuru").children("textarea").val(" ");
+			$(".fasong").css("right","-130px");
+		
+			var hhh=$(".chat-main").prop("scrollHeight");
+			$(".chat-main").css("height","auto");
+			$(".chat-main").scrollTop(hhh);
+			$(document).scrollTop(hhh);
+			
+			//alert($("body")[0].scrollHeight+"px");
+
+		});
+		
+		
+    $(window).click(function(){
+		
+			$(".photo-con").stop().hide();
+		    $("#jia").parent(".chat-con").siblings(".photo-con").removeClass("yes");
+			$("#jia").css({"transform": "rotate(0)", "-webkit-transform": "rotate(0)"});
+		
+			$(".emo-con").stop().hide();
+		    $("#emot").parent(".chat-con").siblings(".emo-con").removeClass("yes");
+		
+			$("#bncon").stop().fadeIn(200);
+			
+			var hhh=$(".chat-main").prop("scrollHeight");
+			$(".chat-main").css("height","auto");
+			$(".chat-main").scrollTop(hhh);
+		
+		
+			$(document).scrollTop(hhh)
+      
+      });
+    
+	//点亮红灯弹框
+		$(".frame-con").hide();
+		$("#nook").click(function(){
+
+			$(".frame-con").delay(200).fadeIn(100);
+			$("#nook").removeClass("btn-red").addClass("btn-red-man");
+		})
+
+		$("#know").click(function(){
+
+			$(".frame-con").fadeOut(100);
+
+		})
+		
+
+	});
+	//同意关系弹框
+		$(".tongyi-con").hide();
+		$("#tongyi").click(function(){
+
+			$(".tongyi-con").delay(200).fadeIn(100);
+		})
+
+		
+
+	
+
+	</script>
+
+</body>
+</html>

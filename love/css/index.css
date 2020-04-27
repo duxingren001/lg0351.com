@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+html{max-width: 640px;  height: 100%; margin:auto; background:#f5f5f5; }
+
+.banner{ margin: 30px;border-radius: 22px; overflow: hidden;}
+.banner img{width:100%;}
+
+.tit-con{margin:0 30px 20px 30px; overflow: hidden;}
+.tit-con h1{float: left; font-size: 30px; color: #333; position: relative; font-weight: 400; padding-bottom: 20px;}
+.tit-con h1 span{ display: block;width:40px; height: 6px;  border-radius: 6px; background: #333;
+	position: absolute; bottom:0; left:0;}
+.choose{font-size: 24px; color: #333; float: right; border-radius: 6px;}
+.choose .icon-w_shaixuan-{ font-size: 30px; position: relative; top:2px; color: #898989;}
+.choose:active{ background:#e5e5e5;}
+
+.main{margin:0 30px; padding-bottom:120px; }
+.main dd{width: 49%;border-radius: 10px; overflow: hidden; background: #fff; float: left; margin-bottom: 2%;
+margin-right: 2%;}
+.main dd:nth-child(even){ margin-right:0;}
+.user-img{ width:100%; border-radius: 10px; overflow: hidden; position: relative;}
+.user-img img{width:100%; opacity: 0.94;}
+.user-word{padding:20px;}
+.user-word h6{font-size:24px; color: #1a1a1a; line-height: 38px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+.user-word h6 .icon-nv{font-size:27px; font-weight: bold; color: #fe6bad;
+    position: relative;
+    top: 2px;}
+.user-word h6 .icon-nan{font-size:27px; font-weight: bold; color: #6bb7fe;
+    position: relative;
+    top: 4px;}
+
+.user-word h6 strong{ font-weight:normal; font-size:18px; color: #666;}
+.user-word p{ font-size:20px; color: #999;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+
+.btn{ display:block; height:50px; border-radius: 50px; color:#fff;  line-height: 50px; margin-top:15px;
+	background-image: linear-gradient(#5edac2,#36afe5); font-size: 24px; text-align: center;}
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }
+.btn .icon-001{ font-size:24px;}
+
+#choose{ position: fixed; /*top:-80px;*/ bottom: 0; right:35%;background-image: linear-gradient(#fd8470,#ff326c); text-align: center;
+ color: #fff; width:30%; height: 60px; border-radius: 60px; 
+box-shadow: 0 0 8px rgba(0,0,0,0.2); font-size: 28px;}
+#choose .icon-w_shaixuan-{ font-size: 34px; color: #fff; position: relative; top:2px;}
+#choose:active{background-image: linear-gradient(#ff326c,#fd8470);}
+
+@keyframes myfirst
+{
+    0%   {bottom:0;}
+    50%  {bottom:140px;}
+    75%  {bottom:120px;}
+    100% {bottom:130px;}
+}
+ 
+@-webkit-keyframes myfirst 
+{
+    0%   {bottom:0;}
+    50%  {bottom:150px;}
+    75%  {bottom:110px;}
+    100% {bottom:130px;}
+}
+/*
+@keyframes myfirst11
+{
+    0%   {top:-80px;}
+    50%  {top:50px;}
+    75%  {top:20px;}
+    100% {top:30px;}
+}
+ 
+@-webkit-keyframes myfirst11
+{
+    0%   {top:-80px;}
+    50%  {top:50px;}
+    75%  {top:20px;}
+    100% {top:30px;}
+}
+*/
+.choose-anim{animation: myfirst 0.8s ease forwards alternate;
+    /* Safari 与 Chrome: */
+    -webkit-animation: myfirst 0.8s  ease forwards alternate;}
+
+.xin-con{ position: absolute; right:15px; bottom:15px;}
+.xin-con li{display:block; width:70px; height: 70px; border-radius: 50%;  background: rgba(0,0,0,0.6);
+line-height: 70px; text-align: center; margin-top:15px; position: relative;}
+.xin-con .iconfont{width:70px; height: 70px;text-align: center; font-size: 40px; }
+.icon-xin{color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.icon-noxin{color: transparent; background-image: linear-gradient(#fd8470,#ff326c);  -webkit-background-clip:text;}
+.icon-xin1,.icon-noxin00{ position: absolute; top:0; left:0; color:#fff;
+	transform: scale(0);  -webkit-transform: scale(0);}
+ 
+@keyframes likeanim
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0);}
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5);}
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7);}
+    100% {transform: scale(1);  -webkit-transform: scale(1);}
+}
+ 
+@-webkit-keyframes likeanim /* Safari 与 Chrome */
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0); }
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5); }
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7); }
+    100% {transform: scale(1);  -webkit-transform: scale(1); }
+}
+
+.like-anim{animation: likeanim 0.8s linear forwards alternate;
+    /* Safari 与 Chrome: */
+    -webkit-animation: likeanim 0.8s  linear forwards alternate;}
+
+.lead-con{ position:fixed; top:0; left: 0; width:100%; height:100%; background:rgba(0,0,0,0.6); }
+.lead-1{ padding-top: 391px;}
+.lead-2{    padding-top: 524px;  display: none;}
+.lead-con img{max-width:640px;}
+
+@keyframes gifanim
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+ 
+@-webkit-keyframes gifanim /* Safari 与 Chrome */
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+
+.gif-anim{animation-name: gifanim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: gifanim;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;}
+
+
+.gif{ position: absolute; width:100%; background: red; bottom:68px; left:0;}
+.gif span{ position: absolute; bottom: 0; opacity: 0;
+	color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.gif span:nth-child(1){ width: 18px; height: 18px;  line-height: 18px;font-size: 18px; left: 24px;
+	
+	animation-duration: 3s;-webkit-animation-duration: 3s; 
+	
+	animation-delay: 0s;-webkit-animation-delay: 0s;}
+
+.gif span:nth-child(2){ width: 24px; height: 24px; line-height: 24px; font-size: 24px;left: 0px;
+	
+	animation-duration: 2s;-webkit-animation-duration: 2s; 
+	
+	animation-delay: 0.3s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(3){ width: 40px; height: 40px; line-height: 40px; font-size: 40px;right: 0;
+	
+	animation-duration: 3.5s;-webkit-animation-duration: 3.5s; 
+	
+	animation-delay: 0.6s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(4){ width: 30px; height: 30px; line-height: 30px; font-size: 30px;left: 8px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 1.5s;-webkit-animation-delay: 1.5s;}
+
+.gif span:nth-child(5){ width: 20px; height: 20px; line-height: 20px; font-size: 20px;right: 10px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 2.5s;-webkit-animation-delay: 2.5s;}

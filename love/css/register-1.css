@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  height: 100%; margin:auto;	background:#fff; }
+
+.main{padding:0 30px;}
+.kuang{ height: 120px; font-size: 32px; position:relative;}
+.kuang span{ display:block; width:40px; height: 40px;  position: absolute; left: 0; top:40px;
+	background:url("../images/dl-zc-icon.png") no-repeat; background-size:40px 200px;}
+.kuang .ic01{ background-position: 0 0;}
+.kuang .ic02{ background-position: 0 -40px;}
+.kuang .ic03{ background-position: 0 -80px;}
+.kuang .ic04{ background-position: 0 -120px;}
+.kuang .ic05{ background-position: 0 -160px;}
+.inp-con{margin-left:60px; position: relative;}
+.inp-con input{ display:block;  height: 120px; line-height: 120px; font-size: 32px;width:100%; 
+	outline: medium; background-color: transparent; border:none;}
+.inp-con svg{ position:absolute; right:0; top:44px; width:32px; height:32px; }
+.kuang strong{font-weight: normal; display: block; height: 42px; 
+	position:absolute; right:0; top: 39px; font-size: 28px;
+	color: transparent;background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text;}
+
+.btn{ display:block; height:80px; border-radius: 80px; color:#fff;  background-image: linear-gradient(#5edac2,#36afe5);
+	font-size: 28px; line-height: 80px;text-align: center; margin-top: 118px; }
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }
+
+.com-name{ position: absolute; top:120px; left:0; z-index: 999;width: 100%; background:#fff; padding-bottom: 120px;}
+.com-name input{display:block; font-size: 28px; height: 120px; line-height: 120px; color: #333; width:100%;
+	outline: medium; border:none; background-color: transparent; border-bottom: solid 1px #e6e6e6;}
+.com-name input:active{ background:#f5f5f5;}
+
+.frame-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4);}
+.fmcon{width:90%; height:480px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.fmcon p{ font-size: 28px; color: #333; text-align: center; line-height: 60px; padding-top:90px;}
+#know{width:400px; margin:auto;margin-top: 100px; }

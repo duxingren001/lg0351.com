@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>注册</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/register-1.css" rel="stylesheet" type="text/css" />
+<style>
+.frame-con1{ position: fixed; top:0; left: 0; height:100%; width: 100%; background:#fff; display: none; overflow-y: auto; }
+.fmcon1{width:100%; height:auto;   margin:50px auto 0 auto;padding-bottom:50px;}
+.fmcon1 h1{ font-size: 34px; text-align: center; font-weight: normal;color: transparent;background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text; }
+.fmcon1 p{  color: #333;line-height: 36px;margin:0 30px; padding-top:30px; }
+.fmcon1 p strong{color: transparent;background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text; }
+#know1{width:400px; margin:auto;margin-top: 20px; font-weight: normal;}
+
+
+
+</style>
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+</head>
+
+<body>
+<div class="main">
+	<div class="kuang line-bottom">
+		<span class="ic01"></span>
+		<div class="inp-con" id="inp-con">
+			<input id="com" class="no" type="text" placeholder="单位名称" readonly="readonly" value=""/>
+			<svg t="1587007328746" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2303"><path d="M824.32 328.96c-12.8-12.8-33.28-12.8-45.44 0L481.92 624 183.68 328.96c-12.8-12.8-33.28-12.8-45.44 0-12.8 12.16-12.8 32.64 0 45.44l317.44 314.24c1.28 1.28 1.28 3.2 2.56 4.48 12.8 12.8 33.28 12.8 45.44 0l320-318.08C837.12 362.24 837.12 341.76 824.32 328.96z" p-id="2304" fill="#9b9b9b"></path></svg>
+		</div>
+		<div class="com-name">
+			<input type="text" readonly="readonly" value="中国民生银行上海分行">
+			<input type="text" readonly="readonly" value="青年汇">
+			<input type="text" readonly="readonly" value="一兜科技">
+			<input id="nocom" type="text" readonly="readonly" value="没有我的单位">
+		</div>
+	</div>
+	<div class="kuang line-bottom">
+		<span class="ic02"></span>
+		<div class="inp-con"><input type="text" placeholder="姓名" /></div>
+	</div>
+	<div class="kuang line-bottom">
+		<span class="ic03"></span>
+		<div class="inp-con"><input type="number" placeholder="手机号码" /></div>
+	</div>
+	<div class="kuang line-bottom">
+		<span class="ic02"></span>
+		<div class="inp-con" style="margin-right:170px;"><input type="text" placeholder="验证码" /></div>
+		<strong>发送验证码</strong>
+	</div>
+	<div class="kuang line-bottom">
+		<span class="ic05"></span>
+		<div class="inp-con"><input type="password" placeholder="请输入密码" /></div>
+	</div>
+	<div class="kuang line-bottom">
+		<span class="ic05"></span>
+		<div class="inp-con"><input type="password" placeholder="请确认密码" /></div>
+	</div>
+	<div class="btn"  onClick="location.href='register-2.html'">下一步</div>
+</div>	
+
+
+
+
+	<div class="frame-con1" >
+		<div class="fmcon1">
+			<h1>联谊平台实操宝典</h1>
+			<p><strong>1、</strong>本联谊平台由中国民生银行上海分行工会开发，仅限对注册单位开放，若还不是注册单位，请与民生银行管理员张鑫怿联系，<strong>021-61877568</strong>。<br/><br/><strong>2、</strong>用户首次登录请先申请注册，正确选择所在单位、填写真实姓名和手机号，设置登录密码后，点击下一步完善个人信息，提交管理员审核，管理员一般1-2个工作日完成审核。<br/><br/><strong>3、</strong>用户完成注册并审核通过后，再次登录平台，输入手机号及密码，进入交友会客厅。若审核未通过，用户登录后，弹话框会显示审核未通过及原因，用户需重新注册审核。<br/><br/><strong>4、</strong>用户在交友会客厅内仅可见异性用户，用户可对大厅内的异性用户亮灯，感兴趣点亮绿灯，不感兴趣点亮红灯，亮绿灯的可开启聊天模式。<br/><br/><strong>5、</strong>交友会客厅同时设有热度排行及筛选功能，用户可根据需求选择。<br/><br/><strong>6、</strong>用户退出后的未读消息，可进入【我】的功能里【消息栏】查找。<br/><br/><strong>7、</strong>男女用户通过联谊平台牵手成功，可进入【我】的功能里点击【牵手成功】，管理员将送出小礼物一份。<br/><br/><strong>8、</strong>本平台的最终解释权归中国民生银行上海分行工会所有。</p>
+			<div class="btn" id="know1">我知道了</div>
+		</div>	
+	</div>
+
+
+
+
+
+
+<div class="frame-con">
+	<div class="fmcon">
+		<p>请联系管理员<br/>联系方式：18748956257</p>
+		<div class="btn" id="know">我知道了</div>
+	</div>	
+</div>
+
+
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script>
+	
+$(function(){
+
+
+
+$(".frame-con1").fadeIn(100);
+
+
+
+		$("#know1").click(function(){
+
+			$(".frame-con1").fadeOut(100);
+
+		})
+
+
+	//下拉菜单
+	$(".com-name").hide();
+	$("#inp-con").click(function(){
+		
+	
+		if($("#inp-con input").attr('class')=="no"){
+		
+		   $("#inp-con input").removeClass("no").addClass("yes");
+		   $(".com-name").stop().fadeIn(200);
+			
+		   }else{
+					
+		   $(".com-name").stop().fadeOut(200);
+		   $("#inp-con input").removeClass("yes").addClass("no");
+		
+		   }
+		
+		event.stopPropagation();
+		
+	});
+	
+	$(".com-name input").click(function(){
+		
+		$("#com").attr("value",$(this).attr('value'));
+		$("#inp-con input").removeClass("yes").addClass("no");
+		
+	});
+    
+    $(window).click(function(){
+		
+      $(".com-name").stop().fadeOut(200);
+	  $("#inp-con input").removeClass("yes").addClass("no");
+      
+      });
+    
+	//没有单位弹框
+	$(".frame-con").hide();
+	$("#nocom").click(function(){
+		
+		$(".frame-con").delay(200).fadeIn(100);
+		
+	})
+	$("#know").click(function(){
+		
+		$(".frame-con").fadeOut(100);
+		
+	})
+	  
+})	
+
+</script>
+</body>
+</html>

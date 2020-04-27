@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  height: 100%; margin:auto;	background:#fff; }
+
+.main{padding:0 30px;}
+.kuang{ height: 120px; font-size: 32px;}
+.kuang span{ display:block; width:40px; height: 40px;  position: absolute; left: 0; top:40px;
+	background:url("../images/dl-zc-icon.png") no-repeat; background-size:40px 200px;}
+.kuang .ic03{ background-position: 0 -80px;}
+.kuang .ic05{ background-position: 0 -160px;}
+.inp-con{margin-left:60px;}
+.inp-con input{ display:block;  height: 120px; line-height: 120px; font-size: 32px;width:100%; outline: medium;
+background-color: transparent; border:none;}
+
+.btn{ display:block; height:80px; border-radius: 80px; color:#fff;  background-image: linear-gradient(#5edac2,#36afe5); font-size: 28px; line-height: 80px;text-align: center; margin-top: 118px; }
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }

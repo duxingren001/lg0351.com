@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  margin:auto;	background:#fff; }
+
+.main{padding:0 30px; padding-bottom: 120px;}
+.main dd{ padding:30px 0; height: 100px;}
+.main dd:active{ background:#f5f5f5;}
+.new-tou{ width:100px; height: 100px;  float: left; position: relative;}
+.tou{ width:100px; height: 100px; border-radius: 100px;  overflow: hidden;}
+.tou img{ width:100%;}
+.new-tou b{display: block;position:absolute;right: 0px; top:-6px; width:36px; height: 30px; line-height: 30px;background:#ff0000; color: #fff;font-size:22px; font-weight: normal;text-align: center; border-radius: 36px;}
+
+.new-word{ padding-top: 6px; margin-left: 120px;}
+.new-word h6{ font-size:32px; font-weight: normal; color: #333; position: relative; padding-bottom: 2px;}
+.new-word h6 .icon-nv{ font-size:32px; font-weight: bold;  color: #fe6bad;  position: relative; top: 1px;}
+.new-word h6 .icon-nan{ font-size:32px; font-weight: bold;  color: #6bb7fe;  position: relative; top: 2px;}
+.new-word h6 b{position:absolute; right: 0; top:8px;  font-weight: normal;font-size: 20px; color: #999;}
+.new-word p{ font-size:24px; color: #999;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+
+.wu{ width:100%; margin:350px auto 0 auto;}
+.wu img{ width: 100%;}
+.wu p{ text-align:center; font-size:24px; color: #999; padding-top: 30px;}

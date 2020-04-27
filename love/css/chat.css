@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+  -webkit-touch-callout:none;  /*系统默认菜单被禁用*/
+  -webkit-user-select:none; /*webkit浏览器*/
+  -khtml-user-select:none; /*早期浏览器*/
+  -moz-user-select:none; /*火狐*/
+  -ms-user-select:none;  /*IE10*/
+  user-select:none;
+}
+html,body{max-width: 640px;  margin:auto;	background:#f5f5f5; }
+.icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.chat-main{padding:30px; overflow:auto; padding-bottom: 260px;}
+.chat-main b{ clear: both; display: block; text-align: center; font-size: 20px; font-weight: normal;
+	color: #999; line-height: 34px; height: 34px; padding:20px 0;}
+.chat-main dd{float: left; width:100%; position: relative;  padding:15px 0; min-height: 88px;}
+.chat-main dt{ float:right;width:100%; position: relative; padding:15px 0; min-height: 88px;}
+.ta-tou,.ta-word{float:left;}
+.me-tou,.me-word{float:right;}
+
+.ta-tou,.me-tou{ width: 88px; height: 88px;  border-radius: 50%; overflow: hidden; position: absolute; top:15px;}
+.ta-tou img,.me-tou img{ width:100%;}
+.ta-tou{ left: 0; }
+.me-tou{ right: 0; }
+.ta-word,.me-word{ font-size:24px; position: relative; padding:25px; background: #fff; border-radius: 10px;}
+.ta-word{ margin-left: 115px; margin-right: 115px;}
+.me-word{margin-right: 115px;margin-left: 115px;background: #52cdcd;}
+.ta-word span,.me-word span{display: block; position:absolute; top:10px; width:30px; height: 30px; line-height: 30px;background:#fff; transform: rotate(45deg); -webkit-transform:rotate(45deg);}
+.ta-word span{left: -10px;}
+.me-word span{right: -10px; background: #52cdcd;}
+.me-word p{ color:#fff;}
+
+
+.chat-main dd .ta-img,.chat-main dt .me-img{ display: block; width:40%; padding-top: 15px;}
+.chat-main dd .ta-img{ float:left; margin-left: 115px;}
+.chat-main dt .me-img{ float:right; margin-right: 115px;}
+
+
+.ft-con{position: fixed; bottom: 0; left: 0; width: 100%;  }
+.bncon{ padding: 13px 50px;  overflow: hidden;}
+.btn{float:left; width:48%;height:78px; border-radius: 78px; color:#fff;  font-size: 28px; line-height: 78px;text-align: center; padding:1px 0; }
+.btn-lv{background-image: linear-gradient(#5edac2,#36afe5); }
+.btn-red{background-image: linear-gradient(#fd8470,#ff326c); }
+.btn .iconfont{ font-size:26px;}
+.btn .icon-noxin00{ font-size:30px; position: relative; top:2px;}
+.btn-baibg{ height: 78px; background:#fff; border-radius: 80px; margin:0 1px;}
+.btn:active .btn-baibg{ background:#fafafa;}
+.btn-lv .btn-baibg span{color: transparent;
+background-image: linear-gradient(#5edac2,#36afe5);  -webkit-background-clip:text;}
+.btn-red .btn-baibg span{color: transparent;
+background-image: linear-gradient(#fd8470,#ff326c);  -webkit-background-clip:text;}
+.btn-red-man .btn-baibg{background-image: linear-gradient(#fd8470,#ff326c);}
+.btn-red-man .btn-baibg span{color: #fff;}
+
+.btn-lv:active .btn-baibg{background-image: linear-gradient(#5edac2,#36afe5);}
+.btn-lv:active .btn-baibg span{color: #fff;}
+
+.btn:nth-child(1){ margin-right:4%;}
+
+/*不感兴趣弹框*/
+.frame-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4); display: none;}
+.fmcon{width:90%; height:520px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.fmcon p{ font-size: 28px; color: #333; text-align: center; line-height: 60px; padding-top:90px;}
+#know{width:400px; margin:auto;margin-top: 100px; float: none;}
+.fmcon p strong{ color: #fe5e6e; font-weight: normal;}
+
+.chat-con{ padding:15px 15px; background: #efefef; position: relative;}
+.chat-btn,.chat-text{ margin-left: 75px; margin-right:145px; background: #fff; border-radius: 10px; 
+padding:20px 20px; }
+.chat-btn input,.chat-text textarea,.fasong{border:none; background-color: transparent; margin:0; padding:0; resize: none; outline:medium; display: block; width:100%; font-size: 28px;}
+.chat-btn{ display: none;}
+.chat-text{ display:block;}
+.chat-btn input{height: 34px; line-height: 34px; }
+.chat-text textarea{  height: 34px; line-height: 34px; }
+.chat-con .iconfont{ color: #333; font-size: 56px;  padding:24px 15px;position: absolute; bottom:0;
+ height: 56px; line-height: 56px;}
+.chat-con .icon-yuyin{ left:0; }
+.chat-con .icon-jianpan{ left:0; display: none;}
+.chat-con .icon-biaoqing{ right:85px; display: none;}
+.chat-con .icon-biaoqing:active{ background:#f5f5f5;}
+.chat-con .icon-jjia-{ right:0;
+transition: transform 0.5s; -webkit-transition: transform 0.5s; }
+.chat-con .icon{ width:50px; height: 56px; position: absolute; padding:24px 15px; bottom:0; right:72px;}
+
+.yuyin .icon-yuyin{ display: block;}
+.yuyin .icon-jianpan{ display: none;}
+.jianpan .icon-yuyin{display: none;}
+.jianpan .icon-jianpan{ display: block; }
+.yj .chat-btn{ display: block;}
+.yj .chat-text{ display: none;}
+.jp .chat-btn{ display: none;}
+.jp .chat-text{ display: block;}
+
+/*文本框有文字时候的发送按钮*/
+.fasong{ position: absolute; /*right:15px;*/ right:-130px; bottom: 21px; height: 60px; line-height: 60px; width:130px; text-align: center;color: #fff; background-image: linear-gradient(#5edac2,#36afe5); border-radius: 6px;
+transition: right 0.5s; -webkit-transition: right 0.5s;}
+.fasong:active{background-image: linear-gradient(#36afe5,#5edac2);}
+
+/*打开表情*/
+.emo-con{ padding:15px; background: #efefef; padding-bottom: 30px; display: none;}
+.emo{ width:100%; overflow: hidden; height: 320px; overflow-y: scroll;}
+.emo-con svg{ float: left; width:12.5%; height: 46px; margin-top:20px; }
+
+/*打开加号*/
+.photo-con{padding:15px; background: #efefef; display: none;}
+.photo-con ul{width:80%; margin:auto; height: 320px; }
+.photo-con li{ float:left; width:50%;  text-align: center; padding:60px 0;}
+.photo-con li:active{ background:#f5f5f5;}
+.photo-con li div{ width:50%; margin:auto;background-color:#fff;border-radius: 10px; padding:35px 0; }
+.photo-con li span{ display:inline-block;font-size:60px; width:60px; height: 60px;  line-height: 60px; color: transparent; background-image: linear-gradient(#5edac2,#36afe5);  -webkit-background-clip:text;}
+.photo-con li p{ font-size:28px; padding-top: 10px; color: #666;}
+
+/*我发送确认关系*/
+.me-queren{font-size:24px; position: relative; padding:25px; border-radius: 10px;margin-right: 115px;margin-left: 115px; background: #52cdcd;background-image: linear-gradient(#5edac2,#36afe5);}
+.me-queren p{ color: #fff; text-align: center;}
+.me-queren span{ display: block;font-size:50px; color: #fff; text-align: center;}
+.me-queren strong{display: block; position:absolute; top:10px;right:-10px; width:30px; height: 30px;transform: rotate(45deg); -webkit-transform:rotate(45deg);background: #52cdcd;
+	background-image: linear-gradient(135deg,#5edac2,#72c8ce);}
+
+/*对方发来确认关系*/
+.ta-queren{font-size:24px; position: relative; padding:25px;  border-radius: 10px;margin-right: 115px;margin-left: 115px;background-image: linear-gradient(#5edac2,#36afe5); }
+.ta-queren p{ color: #fff; text-align: center;}
+.ta-queren span{ display: block;font-size:50px; color: #fff; text-align: center;}
+.ta-queren strong{display: block; position:absolute; top:10px;left:-10px; width:30px; height: 30px;transform: rotate(45deg); -webkit-transform:rotate(45deg);
+	background-image: linear-gradient(135deg,#5edac2,#79d0c8);}
+
+.ta-fs-btn{ margin-left: 120px; margin-right: 120px; margin-top:20px;}
+.ta-fs-btn .ok,.ta-fs-btn .no{  border-radius: 10px; width:46%;}
+.ta-fs-btn .ok{float: left; background-image: linear-gradient(#5edac2,#36afe5);}
+.ta-fs-btn .no{float:right; background-image: linear-gradient(#fd8470,#ff326c);}
+.ta-fs-btn p{ display: block;margin:1px; background:#fff; text-align: center; padding:12px 0; border-radius: 10px;}
+.ta-fs-btn span{ font-size: 24px;}
+.ta-fs-btn .ok span{color: transparent; background-image: linear-gradient(#5edac2,#36afe5); -webkit-background-clip: text;}
+.ta-fs-btn .no span{color: transparent; background-image: linear-gradient(#fd8470,#ff326c); -webkit-background-clip: text;}
+.ta-fs-btn .ok:active p,.ta-fs-btn .ok:hover p{background-image: linear-gradient(#5edac2,#36afe5);}
+.ta-fs-btn .ok:active span,.ta-fs-btn .ok:hover span{ color:#fff;}
+.ta-fs-btn .no:active p,.ta-fs-btn .no:hover p{background-image: linear-gradient(#fd8470,#ff326c);}
+.ta-fs-btn .no:active span,.ta-fs-btn .no:hover span{ color:#fff;}
+
+
+/*我发送的语音*/
+.me-audio{float: right; font-size:24px; position: relative; padding:25px; background: #52cdcd; border-radius: 10px;
+margin-right: 115px;margin-left: 115px;}
+.me-audio svg{ transform:rotate(180deg); -webkit-transform:rotate(180deg); position: relative; top: 0px;}
+.me-audio p{ color: #fff; line-height: 1;}
+.me-audio span{ position:relative; top:-7px;}
+.me-audio strong{display: block; position:absolute; top:10px; width:30px; height: 30px; line-height: 30px;background: #52cdcd; transform: rotate(45deg); -webkit-transform:rotate(45deg); right: -10px;}
+.me-audio:active,.me-audio:active strong{ background:#66b4b6;}
+
+/*对方发来的语音*/
+.ta-audio{float: left; font-size:24px; position: relative; padding:25px; background: #fff; border-radius: 10px;
+margin-right: 115px;margin-left: 115px;}
+.ta-audio p{ line-height: 1;}
+.ta-audio span{ position:relative; top:-7px;}
+.ta-audio strong{display: block; position:absolute; top:10px; width:30px; height: 30px; line-height: 30px;background: #fff; transform: rotate(45deg); -webkit-transform:rotate(45deg); left: -10px;}
+.ta-audio svg{ position: relative; top: 0px; fill:#ccc;}
+.ta-audio:active,.ta-audio:active strong{ background:#e9e9e9;}
+
+
+/*按住说话界面*/
+.voice-con{ position:fixed; bottom:0; left:0; width:100%; height: 100%; background:rgba(0,0,0,0.6); z-index: 99;  display: none;}
+.voice{ position: absolute; bottom:350px; left:40px; width:60%; background-image: linear-gradient(#5edac2,#36afe5);
+padding:20px 0; border-radius: 15px;}
+.voice img{ display: block;width:80%; margin:auto;}
+.voice span{ display: block; position:absolute; bottom:-15px; width:40px; height: 40px; line-height:50%;
+	transform: rotate(45deg); -webkit-transform:rotate(45deg); left: 50px;; border-radius: 5px;
+	background-image: linear-gradient(135deg,#40bbdc,#36b0e4);}
+.close-con{ width:120px; height: 120px; border-radius: 50%; background:rgba(0,0,0,0.6);
+	position: absolute; right: 40px; bottom: 350px; text-align: center;
+	transition: all 0.3s; -webkit-transition: all 0.3s;}
+.chat-con .close-con svg{  width:40px; height: 40px; fill:#ccc; position: relative; top:40px;
+	padding: 0;  bottom: auto;  right:auto;}
+.close-con p{ position: absolute; font-size: 28px; color: #c1c1c1; top:-50px; right:0; opacity:0;}
+.clo{ background:#ccc; transform: scale(1.2); -webkit-transform: scale(1.2);}
+.chat-con .clo svg{fill:#333; }
+.clo p{opacity:1;}
+
+.fangda{width:120%; height:30%; border-radius: 100%; background-color: transparent; position: fixed; bottom:-14%; left: -10%;text-align:center; z-index: 100; margin:0; padding:0;}
+.qu{ width:100%; height:100%; border-radius: 100%; background: #dcdcdc;text-align:center; display: none;}
+.qu .icon-yuyin{padding:0; position: absolute; width:100%; left:0; top:30px; display: block; font-size: 60px; color: #999;}
+.qu p{ width:100%; text-align: center;position:absolute; top:-50px; font-size: 28px; color: #c1c1c1;  }
+.fangda .qu{display:block;}
+
+
+/*语音图标动画*/
+@keyframes svganim
+{
+    0%   {opacity: 0}
+    50%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+ 
+@-webkit-keyframes svganim /* Safari 与 Chrome */
+{
+    0%   {opacity: 0}
+    50%  {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+.svg-anim svg path:nth-child(1){ animation: svganim 0.5s linear 0.2s infinite normal;
+    /* Safari 与 Chrome: */
+    -webkit-animation: svganim 0.5s  linear 0.2s infinite alternate;}
+
+.svg-anim svg path:nth-child(2){ animation: svganim 0.5s linear 0s infinite normal;
+    /* Safari 与 Chrome: */
+    -webkit-animation: svganim 0.5s  linear 0s infinite alternate;}
+
+/*牵手成功弹框*/
+.tongyi-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4); display: none;}
+.tycon{width:90%; height:520px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.tycon p{ font-size: 28px; color: #333; text-align: center; line-height: 60px; padding-top:90px;}
+.tycon .btn{width:400px; margin:auto;margin-top: 100px; float: none;}
+.tycon p strong{ color: #fe5e6e; font-weight: normal;}
+
+
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>注册</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/start-up.css" rel="stylesheet" type="text/css" />
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+</head>
+
+<body>
+	<div class="main">
+		<img src="../images/index-top.png"/>
+		<img class="logo" src="../images/logo.png"/>
+		<div class="start-up-btn">
+			<a href="javascript:;"><span>登录</span></a>
+			<a href="javascript:;"><span>注册</span></a>
+		</div>
+	</div>
+</body>
+</html>

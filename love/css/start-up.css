@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+html{max-width: 640px;  height: 100%; margin:auto;
+	background:url("../images/index-bg.jpg") no-repeat top center; background-size: 100% 100%; }
+.main img{ display: block; width:100%;}
+.logo{ margin-top:120px;}
+.start-up-btn{width:60%; margin:auto; margin-top:130px;}
+.start-up-btn a{ display: block; height: 40px; line-height: 40px; border-radius: 80px; background: #fff; margin:20px 0;color: transparent; padding:20px 0;}
+.start-up-btn a span{ display:block; text-align: center; font-size: 28px; color: transparent;
+background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text;}
+
+.main p{ font-size: 28px; text-align: center;color: transparent; margin-top: 50px;
+background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text;}
+.main p span{ font-size: 24px;}
+
+
+.btn{ display:block; height:80px; border-radius: 80px; color:#fff;  background-image: linear-gradient(#5edac2,#36afe5);
+	font-size: 28px; line-height: 80px;text-align: center; }
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }
+
+.frame-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background:#fff; display: none; overflow-y: auto; }
+.fmcon{width:100%; height:auto;   margin:50px auto 0 auto;padding-bottom:50px;}
+.fmcon h1{ font-size: 34px; text-align: center; font-weight: normal;color: transparent;background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text; }
+.fmcon p{  color: #333;line-height: 36px;margin:0 30px; padding-top:30px; }
+.fmcon p strong{color: transparent;background-image: linear-gradient(#5edac2,#0067b1);  -webkit-background-clip:text; }
+#know{width:400px; margin:auto;margin-top: 20px; font-weight: normal;}
+
+
+
+ @media screen and (min-height:1200px) {
+  .logo {  margin-top:200px;}
+	 .start-up-btn{ margin-top:200px;}
+ }

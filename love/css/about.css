@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  height: 100%; margin:auto;	background:#f5f5f5; }
+
+
+.main{ background:#fff;}
+.kuang{ height: 120px; font-size: 32px; position:relative;padding:0 30px;}
+.inp-con{ position: relative;}
+.kuang:active{ background:#f5f5f5;}
+.icon-003{color: #53bef3; font-size: 36px; position: relative; top:2px;}
+.icon-004{color: #ff40cb; font-size: 36px; position: relative; top:0px;}
+.inp-con p{height: 120px; line-height: 120px; font-size: 32px; width:100%;color: #333; }
+.inp-con svg{ position:absolute; right:-10px; top:40px; width:40px; height:40px; }
+
+.about-logo{ width:100%; margin:100px auto;}

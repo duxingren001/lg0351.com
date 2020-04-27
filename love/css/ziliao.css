@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  height: 100%; margin:auto;	background:#fff; }
+
+
+.main{padding:0 30px;}
+.kuang{ height: 120px; font-size: 32px; position:relative;}
+.inp-con{ position: relative;}
+.inp-con p{height: 120px; line-height: 120px; font-size: 32px; width:100%;color: #999; }
+.inp-con input{ display:block;  height: 120px; line-height: 120px; font-size: 32px; width:100%; 
+	outline: medium; background-color: transparent; border:none;}
+.inp-con svg{ position:absolute; right:-10px; top:40px; width:40px; height:40px; }
+.inp-con .fill{ position:absolute; right:0; top:0; font-size: 28px; color: #999; text-align:right;}
+.tou{position:absolute; right:28px; top:16px; width:88px; height:88px; border-radius: 88px;overflow: hidden;}
+.tou img{ width:100%;}
+.inp-con .r{right:28px;}
+
+
+.btn{ display:block; height:80px; border-radius: 80px; color:#fff;  background-image: linear-gradient(#5edac2,#36afe5);
+	font-size: 28px; line-height: 80px;text-align: center; margin-top: 118px; }
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }
+
+.com-name{ position: absolute; top:120px; left:0; z-index: 999;width: 100%; background:#fff;}
+.com-name input{display:block; font-size: 28px; height: 120px; line-height: 120px; color: #333; width:100%;
+	outline: medium; border:none; background-color: transparent; border-bottom: solid 1px #e6e6e6; text-align: center}
+.com-name input:active{ background:#f5f5f5;}
+
+.frame-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4);}
+.fmcon{width:90%; height:480px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.fmcon p{ font-size: 28px; color: #333; text-align: center; line-height: 60px; padding-top:90px;}
+#know{width:400px; margin:auto;margin-top: 100px; }

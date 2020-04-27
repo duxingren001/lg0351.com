@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{max-width: 640px;  height: 100%; margin:auto;	background:#f5f5f5; }
+
+.main{padding:25px 30px; background: #fff;}
+.ta-name{}
+.ta-name h6{ font-size: 32px; color: #333; line-height: 1; padding-bottom: 15px; font-weight: normal;}
+.ta-name h6 .icon-nv{ font-size: 32px;font-weight: bold; color: #fe6bad;  position: relative;}
+.ta-name h6 .icon-nan{font-size: 32px;font-weight: bold; color: #6bb7fe;  position: relative; top: 4px;}
+.ta-name h6 b{ font-size: 24px; font-weight: normal; color: #666;}
+.ta-name p{ font-size:24px; color: #999;}
+h5{font-size: 32px; color: #333; line-height: 1; padding-bottom: 15px; font-weight: normal;}
+.zl-con{ display: block; width:100%;}
+.zl-con tbody{ display:block; width:100%; padding-top:10px;}
+.zl-con tr{ display: block; padding-bottom: 40px; overflow: hidden; width: 100%;}
+.zl-con tr:nth-child(2){ padding-bottom:25px;}
+.zl-con tr td{ float:left; text-align: left;}
+.zl-con tr td:nth-child(1){ width:40%;}
+.zl-con tr td:nth-child(2){ width:40%;}
+.zl-con tr td:nth-child(3){ width:20%;}
+.zl-con tr td span{ font-size: 22px; color: #666}
+.zl-con tr td p{ font-size:28px; color: #333; padding-top: 5px;}
+.zl-con .chang{ padding-top: 25px; padding-bottom: 25px;}
+.zl-con .chang td:nth-child(1){ width:100%;}
+.zl-con .chang:last-child{ padding-bottom:0;}
+
+
+
+
+
+.ren{}
+.ren dd{ padding:30px 0; height: 100px;}
+.ren dd:active{ background:#f5f5f5;}
+.new-tou{ width:100px; height: 100px;  float: left; position: relative;}
+.tou{ width:100px; height: 100px; border-radius: 100px;  overflow: hidden;}
+.tou img{ width:100%;}
+
+.new-word{ padding-top: 6px; margin-left: 120px;}
+.new-word h6{ font-size:32px; font-weight: normal; color: #333; position: relative; padding-bottom: 2px;}
+.new-word h6 .icon-nv{ font-size:32px; font-weight: bold;  color: #fe6bad;  position: relative; top: 1px;}
+.new-word h6 .icon-nan{ font-size:32px; font-weight: bold;  color: #6bb7fe;  position: relative; top: 2px;}
+.new-word h6 b{position:absolute; right: 0; top:8px;  font-weight: normal;font-size: 20px; color: #999;}
+.new-word p{ font-size:24px; color: #999;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+
+
+.btn-con{position: fixed; bottom: 0; left: 0; width: 100%; /* background: #fff; */}
+.bncon{ /*padding: 13px 30px;*/ padding:20px 30px; overflow: hidden;/* border-top: solid 1px #e6e6e6;*/}
+.btn{float:left; width:48%;height:78px; border-radius: 78px; color:#fff;  font-size: 28px; line-height: 78px;text-align: center; padding:1px 0; background-image: linear-gradient(#ccc,#b1b1b1); }
+.btn-ok{background-image: linear-gradient(#5edac2,#36afe5); }
+.btn-ok:active{background-image: linear-gradient(#36afe5,#5edac2); }
+
+.btn .iconfont{ font-size:26px;}
+.btn-baibg{ height: 78px; background:#fff; border-radius: 80px; margin:0 1px;}
+.btn:active .btn-baibg{ background:#fafafa;}
+.btn .btn-baibg span{color: transparent;
+background-image: linear-gradient(#5edac2,#36afe5);  -webkit-background-clip:text;}
+/*.btn:nth-child(1){ margin-right:4%;}*/
+.btn:nth-child(1){ width:100%;}
+
+
+/*.frame-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4);}
+.fmcon{width:90%; height:480px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.fmcon p{ font-size: 28px; color: #333; text-align: center; line-height: 60px; padding-top:90px;}
+#know{width:400px; margin:auto;margin-top: 100px; float: none;}*/
+
+
+.user-img{ width:100%; height: 560px;  overflow: hidden; position: relative;}
+.user-img img{width:100%; opacity: 0.94;}
+
+.xin-con{ position: absolute; right:30px; bottom:30px;}
+.xin-con li{display:block; width:80px; height: 80px; border-radius: 50%;  background: rgba(0,0,0,0.6);
+line-height: 80px; text-align: center; margin-top:15px; position: relative;}
+.xin-con .iconfont{width:80px; height: 80px;text-align: center; font-size:50px; }
+.icon-xin{color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.icon-noxin{color: transparent; background-image: linear-gradient(#fd8470,#ff326c);  -webkit-background-clip:text;}
+.icon-xin1,.icon-noxin00{ position: absolute; top:0; left:0; color:#fff;
+	transform: scale(0);  -webkit-transform: scale(0);}
+ 
+@keyframes likeanim
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0);}
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5);}
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7);}
+    100% {transform: scale(1);  -webkit-transform: scale(1);}
+}
+ 
+@-webkit-keyframes likeanim /* Safari 与 Chrome */
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0); }
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5); }
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7); }
+    100% {transform: scale(1);  -webkit-transform: scale(1); }
+}
+
+.like-anim{animation: likeanim 0.8s linear forwards alternate;
+    /* Safari 与 Chrome: */
+    -webkit-animation: likeanim 0.8s  linear forwards alternate;}
+
+
+@keyframes gifanim
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+ 
+@-webkit-keyframes gifanim /* Safari 与 Chrome */
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+
+.gif-anim{animation-name: gifanim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: gifanim;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;}
+
+
+.gif{ position: absolute; width:100%;  bottom:78px; left:0;}
+.gif span{ position: absolute; bottom: 0; opacity: 0;
+	color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.gif span:nth-child(1){ width: 18px; height: 18px;  line-height: 18px;font-size: 18px; left: 24px;
+	
+	animation-duration: 3s;-webkit-animation-duration: 3s; 
+	
+	animation-delay: 0s;-webkit-animation-delay: 0s;}
+
+.gif span:nth-child(2){ width: 24px; height: 24px; line-height: 24px; font-size: 24px;left: 0px;
+	
+	animation-duration: 2s;-webkit-animation-duration: 2s; 
+	
+	animation-delay: 0.3s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(3){ width: 40px; height: 40px; line-height: 40px; font-size: 40px;right: 0;
+	
+	animation-duration: 3.5s;-webkit-animation-duration: 3.5s; 
+	
+	animation-delay: 0.6s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(4){ width: 30px; height: 30px; line-height: 30px; font-size: 30px;left: 8px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 1.5s;-webkit-animation-delay: 1.5s;}
+
+.gif span:nth-child(5){ width: 20px; height: 20px; line-height: 20px; font-size: 20px;right: 10px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 2.5s;-webkit-animation-delay: 2.5s;}
+
+.danwei{position:relative; padding-right:80px;}
+.danwei strong{ position:absolute; right:0; top:8px;  font-size: 24px;  font-weight: normal; 
+color: transparent;
+    background-image: linear-gradient(#5edac2,#36afe5);
+    -webkit-background-clip: text;
+
+}
+.danwei-con{ position: fixed; top:0; left: 0; height:100%; width: 100%; background-color:rgba(0,0,0,0.4); display: none;}
+.dwcon{width:90%; height:auto; padding-bottom: 80px;  background:#fff; border-radius:30px; margin:300px auto 0 auto;}
+.dwcon p{ font-size: 28px; color: #333; width:70%; line-height: 42px;margin:auto; padding-top:90px;}
+.dwcon .btn{width:70%; margin:auto;margin-top: 80px; float: none;}
+
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<title>编辑资料</title>
+<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+<link href="../css/ziliao.css" rel="stylesheet" type="text/css" />
+<script>
+  /*不同分辨率手机*/
+  var userScalable = "no";
+  var ins = "";
+  (function() {
+    if (window.devicePixelRatio === 1.5) {
+      userScalable = "yes";
+      ins = "initial-scale=0.5"
+    }
+    var text = "<meta content='"+ins+", target-densitydpi=device-dpi, width=640,user-scalable=" + userScalable + "' name='viewport'>";
+    document.write(text);
+  })();
+</script>
+</head>
+
+<body>
+<div class="main">
+	<div class="kuang line-bottom">
+		<div class="inp-con">
+			<p>头像</p>
+			<div class="tou"><img src="../images/tou.png"/></div>
+			<svg t="1587016121638" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3153"><path d="M385.174312 788.414961c-6.503881 0-13.007763-2.16796-18.066337-7.226535-10.117149-10.117149-10.117149-26.015526 0-35.410021l231.249117-231.249118c1.445307-1.445307 1.445307-4.335921 0-5.781228l-231.249117-232.694425c-10.117149-10.117149-10.117149-26.015526 0-36.132674s26.015526-10.117149 36.132674 0l231.971772 231.971771c21.679605 21.679605 21.679605 56.366972 0 77.323924l-231.249118 231.249118c-5.781228 5.781228-12.285109 7.949188-18.788991 7.949188z" p-id="3154" fill="#9b9b9b"></path></svg>
+		</div>
+	</div>
+	<div class="kuang line-bottom">
+		<div class="inp-con">
+			<p>昵称</p>
+			<input class="fill r" type="text" value="昵称" />
+			<svg t="1587016121638" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3153"><path d="M385.174312 788.414961c-6.503881 0-13.007763-2.16796-18.066337-7.226535-10.117149-10.117149-10.117149-26.015526 0-35.410021l231.249117-231.249118c1.445307-1.445307 1.445307-4.335921 0-5.781228l-231.249117-232.694425c-10.117149-10.117149-10.117149-26.015526 0-36.132674s26.015526-10.117149 36.132674 0l231.971772 231.971771c21.679605 21.679605 21.679605 56.366972 0 77.323924l-231.249118 231.249118c-5.781228 5.781228-12.285109 7.949188-18.788991 7.949188z" p-id="3154" fill="#9b9b9b"></path></svg>
+		</div>
+	</div>
+	<div class="kuang line-bottom">
+		<div class="inp-con">
+			<p>真实姓名</p>
+			<input class="fill" type="text" readonly="readonly" value="陈慧" />
+		</div>
+	</div>
+	<div class="kuang line-bottom">
+		<div class="inp-con">
+			<p>手机号码</p>
+			<input class="fill" type="text" readonly="readonly" value="15236547895" />
+		</div>
+	</div>
+	<div class="kuang line-bottom">
+		<div class="inp-con">
+			<p>单位名称</p>
+			<input class="fill" type="text" readonly="readonly" value="中国民生银行上海分行" />
+		</div>
+	</div>
+	
+	<div class="kuang line-bottom">
+		<div class="inp-con" id="xueli-inp">
+			<p class="no">学历</p>
+			<input id="xueli" class="fill r" type="text" readonly="readonly" value="大专" />
+			<svg class="no" t="1587016121638" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3153"><path d="M385.174312 788.414961c-6.503881 0-13.007763-2.16796-18.066337-7.226535-10.117149-10.117149-10.117149-26.015526 0-35.410021l231.249117-231.249118c1.445307-1.445307 1.445307-4.335921 0-5.781228l-231.249117-232.694425c-10.117149-10.117149-10.117149-26.015526 0-36.132674s26.015526-10.117149 36.132674 0l231.971772 231.971771c21.679605 21.679605 21.679605 56.366972 0 77.323924l-231.249118 231.249118c-5.781228 5.781228-12.285109 7.949188-18.788991 7.949188z" p-id="3154" fill="#9b9b9b"></path></svg>
+			<div class="com-name">
+				<input type="text" readonly="readonly" value="高中及以下">
+				<input type="text" readonly="readonly" value="大专">
+				<input type="text" readonly="readonly" value="本科">
+				<input type="text" readonly="readonly" value="研究生">
+				<input type="text" readonly="readonly" value="博士">
+			</div>
+		</div>
+	</div>
+	
+	<div class="kuang line-bottom">
+		<div class="inp-con" id="sex-inp">
+			<p class="no">性别</p>
+			<input id="sex" class="fill r" type="text" readonly="readonly" value="男" />
+			<svg class="no" t="1587016121638" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3153"><path d="M385.174312 788.414961c-6.503881 0-13.007763-2.16796-18.066337-7.226535-10.117149-10.117149-10.117149-26.015526 0-35.410021l231.249117-231.249118c1.445307-1.445307 1.445307-4.335921 0-5.781228l-231.249117-232.694425c-10.117149-10.117149-10.117149-26.015526 0-36.132674s26.015526-10.117149 36.132674 0l231.971772 231.971771c21.679605 21.679605 21.679605 56.366972 0 77.323924l-231.249118 231.249118c-5.781228 5.781228-12.285109 7.949188-18.788991 7.949188z" p-id="3154" fill="#9b9b9b"></path></svg>
+			<div class="com-name">
+				<input type="text" readonly="readonly" value="男">
+				<input type="text" readonly="readonly" value="女">
+			</div>
+		</div>
+	</div>
+	 
+	
+	<div class="btn" id="reg" >立即保存</div>
+</div>	
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script>
+	
+$(function(){
+	//下拉菜单----学历
+	$("#xueli-inp .com-name").hide();
+	$("#xueli").click(function(){
+        $(".com-name").stop().fadeOut(200);
+		$("#sex-inp p").removeClass("yes").addClass("no");
+		
+		if($("#xueli-inp p").attr('class')=="no"){
+		
+		   $("#xueli-inp p").removeClass("no").addClass("yes");
+		   $("#xueli-inp .com-name").stop().fadeIn(200);
+			
+		   }else{
+					
+		   $("#xueli-inp .com-name").stop().fadeOut(200);
+		   $("#xueli-inp p").removeClass("yes").addClass("no");
+		
+		   }
+		
+		event.stopPropagation();
+		
+	});
+	
+	$("#xueli-inp .com-name input").click(function(){
+		
+		$("#xueli").attr("value",$(this).attr('value'));
+		$("#xueli-inp p").removeClass("yes").addClass("no");
+		
+	});
+    //下拉菜单----性别
+	$("#sex-inp .com-name").hide();
+	$("#sex").click(function(){
+        $(".com-name").stop().fadeOut(200);
+		$("#xueli-inp p").removeClass("yes").addClass("no");
+		
+		if($("#sex-inp p").attr('class')=="no"){
+		
+		   $("#sex-inp p").removeClass("no").addClass("yes");
+		   $("#sex-inp .com-name").stop().fadeIn(200);
+			
+		   }else{
+					
+		   $("#sex-inp .com-name").stop().fadeOut(200);
+		   $("#sex-inp p").removeClass("yes").addClass("no");
+		
+		   }
+		
+		event.stopPropagation();
+		
+	});
+	
+	$("#sex-inp .com-name input").click(function(){
+		
+		$("#sex").attr("value",$(this).attr('value'));
+		$("#sex-inp p").removeClass("yes").addClass("no");
+		
+	});
+	
+	
+	
+    $(window).click(function(){
+		
+		$("#xueli-inp p").removeClass("yes").addClass("no");
+		$("#sex-inp p").removeClass("yes").addClass("no");
+        $(".com-name").stop().fadeOut(200);
+      
+      
+      });
+    
+	  
+})	
+
+</script>
+</body>
+</html>

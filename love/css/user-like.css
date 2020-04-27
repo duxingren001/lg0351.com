@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+html{max-width: 640px;  height: 100%; margin:auto; background:#f5f5f5;  overflow-y: hidden;}
+
+.main{margin:30px;  }
+.main dd{width: 49%;border-radius: 10px; overflow: hidden; background: #fff; float: left; margin-bottom: 2%;
+margin-right: 2%;}
+.main dd:nth-child(even){ margin-right:0;}
+.user-img{ width:100%; border-radius: 10px; overflow: hidden; position: relative;}
+.user-img img{width:100%; opacity: 0.94;}
+.user-word{padding:20px;}
+.user-word h6{font-size:24px; color: #1a1a1a; line-height: 38px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+.user-word h6 .icon-nv{font-size:27px; font-weight: bold; color: #fe6bad;
+    position: relative;
+    top: 2px;}
+.user-word h6 .icon-nan{font-size:27px; font-weight: bold; color: #6bb7fe;
+    position: relative;
+    top: 4px;}
+
+.user-word h6 strong{ font-weight:normal; font-size:18px; color: #666;}
+.user-word p{ font-size:20px; color: #999;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+
+.btn{ display:block; height:50px; border-radius: 50px; color:#fff;  line-height: 50px; margin-top:15px;
+	background-image: linear-gradient(#5edac2,#36afe5); font-size: 24px; text-align: center;}
+.btn:active{background-image: linear-gradient(#36afe5,#5edac2); }
+.btn .icon-001{ font-size:24px;}
+
+.xin-con{ position: absolute; right:15px; bottom:15px;}
+.xin-con li{display:block; width:70px; height: 70px; border-radius: 50%;  background: rgba(0,0,0,0.6);
+line-height: 70px; text-align: center; margin-top:15px; position: relative;}
+.xin-con .iconfont{width:70px; height: 70px;text-align: center; font-size: 40px; }
+.icon-xin{color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.icon-noxin{color: transparent; background-image: linear-gradient(#fd8470,#ff326c);  -webkit-background-clip:text;}
+.icon-xin1,.icon-noxin00{ position: absolute; top:0; left:0; color:#fff;
+	transform: scale(0);  -webkit-transform: scale(0);}
+ 
+@keyframes likeanim
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0);}
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5);}
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7);}
+    100% {transform: scale(1);  -webkit-transform: scale(1);}
+}
+ 
+@-webkit-keyframes likeanim /* Safari 与 Chrome */
+{
+    0%   {transform: scale(0);  -webkit-transform: scale(0); }
+    50%  {transform: scale(1.5);  -webkit-transform: scale(1.5); }
+    75%  {transform: scale(0.7);  -webkit-transform: scale(0.7); }
+    100% {transform: scale(1);  -webkit-transform: scale(1); }
+}
+
+.like-anim{animation: likeanim 0.8s linear forwards alternate;
+    /* Safari 与 Chrome: */
+    -webkit-animation: likeanim 0.8s  linear forwards alternate;}
+
+
+@keyframes gifanim
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+ 
+@-webkit-keyframes gifanim /* Safari 与 Chrome */
+{
+    0%   {bottom: 0; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    30%  {bottom: 0; opacity: 1;transform: scale(1);  -webkit-transform: scale(1);}
+	85%  {bottom: 70px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+    100% {bottom: 0px; opacity: 0;transform: scale(0);  -webkit-transform: scale(0);}
+}
+
+.gif-anim{animation-name: gifanim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: gifanim;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-play-state: running;}
+
+
+.gif{ position: absolute; width:100%; background: red; bottom:68px; left:0;}
+.gif span{ position: absolute; bottom: 0; opacity: 0;
+	color: transparent; background-image: linear-gradient(#96ffec,#29cc9f);  -webkit-background-clip:text;}
+.gif span:nth-child(1){ width: 18px; height: 18px;  line-height: 18px;font-size: 18px; left: 24px;
+	
+	animation-duration: 3s;-webkit-animation-duration: 3s; 
+	
+	animation-delay: 0s;-webkit-animation-delay: 0s;}
+
+.gif span:nth-child(2){ width: 24px; height: 24px; line-height: 24px; font-size: 24px;left: 0px;
+	
+	animation-duration: 2s;-webkit-animation-duration: 2s; 
+	
+	animation-delay: 0.3s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(3){ width: 40px; height: 40px; line-height: 40px; font-size: 40px;right: 0;
+	
+	animation-duration: 3.5s;-webkit-animation-duration: 3.5s; 
+	
+	animation-delay: 0.6s;-webkit-animation-delay: 0.6s;}
+
+.gif span:nth-child(4){ width: 30px; height: 30px; line-height: 30px; font-size: 30px;left: 8px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 1.5s;-webkit-animation-delay: 1.5s;}
+
+.gif span:nth-child(5){ width: 20px; height: 20px; line-height: 20px; font-size: 20px;right: 10px;
+	
+	animation-duration: 2.5s;-webkit-animation-duration: 2.5s; 
+	
+	animation-delay: 2.5s;-webkit-animation-delay: 2.5s;}
